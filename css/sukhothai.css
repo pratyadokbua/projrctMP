@@ -35,10 +35,6 @@
     margin-left: 45%;
     transform: rotate(-8deg);
 }
-.txt3{
-    width: 100%;
-   
-}
 .txtbox3{
     width: 30%;
     margin-top: -60%;
@@ -83,7 +79,7 @@
 }
 .txt{
     margin-top: 45%;
-    font-size:20px;
+    font-size:2vw;
     width: 100%;
     text-align: center;
     font-family:'Itim';
@@ -91,8 +87,7 @@
 
 }
 .txt6  {
-    font-size:3vh
-;
+    font-size:2vw;
     width: 60%;
     text-align: center;
     font-family:'Itim';
@@ -104,7 +99,7 @@
 }
 .txt3{
     margin-top: 10%;
-    font-size:20px;
+    font-size:2vw;
     width: 100%;
     text-align: center;
     font-family:'Itim';
@@ -126,9 +121,10 @@
     width:90%;
     margin-top: 3%;
     filter: drop-shadow(5px 2px 4px #c9bca4);
+    
 }
 .txt4{
-    font-size:18px;
+    font-size:2vw;;
     text-align: center;
     font-family:'Itim';
     margin-top: -1%;
@@ -138,15 +134,59 @@
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px;
-    width: 40%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     font-family:'Itim';
     font-size:15px;
+    gap:5%
 }
 .frunc{
     width: 60%;
     transform: rotate(40deg);
     margin-left:96%;
 }
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 28%;
+    transform: rotate(-17deg);
+    font-size: 2.4vw;
+    color: #fff;
+  }
+  .centered2 {
+    font-size: 1.6vw;
+    color: #fff;
+    text-align: center;
+  }
+  .centered3 {
+    position: absolute;
+    top: 50%;
+    left:45%;
+    transform: translate(-50%, -50%) scalex(-1);
+    text-align: center;
+    color: #3f99b6;
+    font-size: 1.8vw;
+    width: 100%;
+  }
+  .centered4 {
+    position: absolute;
+    top: 48%;
+    left:45%;
+    transform: translate(-50%, -50%) rotate(10deg);
+    text-align: center;
+    color: #3f99b6;
+    font-size: 1.8vw;
+    width: 100%;
+  }
+  .centered5 {
+    position: absolute;
+    top: 42%;
+    left:53%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ef5a2e;
+    font-size: 1.5vw;
+    width: 100%;
+  }
