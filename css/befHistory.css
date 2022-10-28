@@ -1,0 +1,301 @@
+/* before history */
+
+.bef_history_bg{
+    width: 100%;
+}
+.character{
+    width: 100%;
+    height: 100%;
+}
+.character_container{
+    position: relative;
+    width: 25%;
+    left: 25%;
+    transform: scaleX(1);
+    margin-top: -26%;
+}
+.character_container[data-character ="axe_wood"]{
+    margin-top: 5%;
+    left: 20%;
+}
+.character_container[data-character ="meat"]{
+    left: 60%;
+}
+.character_container[data-character ="shell"]{
+    margin-top: 15%;
+    left: 15%;
+    width: 20%;
+}
+.character_container[data-character ="nut"]{
+    left: 30%;
+    width: 20%;
+}
+.character_container[data-character ="bracelet"]{
+    margin-top: -14%;
+    left: 47%;
+    width: 20%;
+}
+.character_container[data-character ="buffalo"]{
+    margin-top: -25%;
+    left: 70%;
+    width: 20%;
+}
+.character_container[data-character ="copper"]{
+    margin-top: 10%;
+    left: 15%;
+    width: 20%;
+}
+.character_container[data-character ="gold"]{
+    margin-top: -18%;
+    left: 65%;
+    width: 20%;
+}
+.character_container[data-character ="silver"]{
+    margin-top: -21%;
+    left:40%;
+    width: 20%;
+}
+.character_container[data-character ="duangnoi"]{
+    margin-top: 15%;
+    left:5%;
+    width: 25%;
+    transform: scaleX(-1) rotate(10deg);
+}
+.character_container[data-character ="funancoin"]{
+    margin-top: 0%;
+    left:18%;
+    width: 20%;
+    transform: scaleX(1) rotate(10deg);
+}
+.character_container[data-character ="twancoin"]{
+    margin-top:-21%;
+    left:41%;
+    width: 20%;
+    transform: scaleX(1) rotate(10deg);
+}
+.character_container[data-character ="srivichaicoin"]{
+    margin-top:-24%;
+    left:61.5%;
+    width: 27%;
+    z-index: 1; 
+}
+.character_container[data-character ="star1"]{
+    position: absolute;
+    margin-top:12%;
+    width: 4%;
+    left:30%;
+}
+.character_container[data-character ="star2"]{
+    position: absolute;
+    margin-top:25%;
+    width: 3%;
+    left:35%;
+}
+.character_container[data-character ="star3"]{
+    position: absolute;
+    margin-top:10%;
+    width: 4.5%;
+    left:49%;
+}
+.character_container[data-character ="star4"]{
+    position: absolute;
+    margin-top:14%;
+    width: 3%;
+    left:65.9%;
+}
+.character_container[data-character ="star5"]{
+    position: absolute;
+    margin-top:27%;
+    width: 4%;
+    left:60%;
+}
+.character_container[data-character ="star6"]{
+    position: absolute;
+    margin-top:25%;
+    width: 3%;
+    left:78%;
+}
+.buble{
+    position: absolute;
+    width: 30%;
+    top: 35%;
+    left: 45%;
+}
+.buble_text{
+    position: absolute;
+    font-size: 2vw;
+    top:28%;
+    left:30%;
+    color: #248bab;
+    width:45%;
+    text-align: center;
+}
+.buble[data-buble ="bub1"]{
+    position: relative;
+    margin-top: -35%;
+    left: 25%;
+}
+.topic {
+    position: absolute;
+    color:white;
+    text-align:center;
+    padding-left: 50px;
+    padding-right: 50px;
+    top:5%;
+    left: 43%;
+    font-size: 1vw;
+    width: 30%;
+    transform: rotate(10deg);
+}
+.topic_text {
+    position: absolute;
+    font-size: 1.8vw;
+    transform: rotate(-16.8deg) translate(5.25vh, 2vh);
+    top:38%;
+    left:22%;
+}
+.info{
+    position: relative;
+    background-color: #238AAC;
+    color:white;
+    text-align: center;
+    width: 26vw;
+    border-radius: 10px;
+    padding:1px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-size: 2vw;
+    margin-top: 5% ;
+    left: 37%;
+    font-weight: lighter;
+    transform: rotate(10deg);
+    filter: drop-shadow(5px 3px 4px black);
+}
+.info[data-direction ="left"]{
+    width: 58vw;
+    left: 19%;
+    margin-top: 10%;
+    transform: rotate(-3deg);
+}
+.info[data-direction ="right"]{
+    width: 46vw;
+    left: 25%;
+    margin-top: 10%;
+    transform: rotate(3deg);
+}
+.info[data-direction ="befSukhotext1"]{
+    width: 100vw;
+    left: 0;
+    font-size: 2vw;
+    font-weight: bold;
+    margin-top: 5%;
+    transform: rotate(0deg);
+    filter:none;
+    color:#8F663A;
+    background-color: transparent;
+}
+.info[data-direction ="funancoin"]{
+    width: 10vw;
+    left: 25%;
+    font-size: 1.5vw;
+    margin-top: -2%;
+    transform: rotate(0deg);
+    background-color: #6FA764;
+}
+.info[data-direction ="twancoin"]{
+    width: 12vw;
+    left: 49%;
+    margin-top: -4.8%;
+    font-size: 1.5vw;
+    transform: rotate(0deg);
+    background-color: #6FA764;
+}
+.info[data-direction ="srivichaicoin"]{
+    width: 12vw;
+    left: 75%;
+    margin-top: -4.8%;
+    font-size: 1.5vw;
+    transform: rotate(0deg);
+    background-color: #6FA764;
+}
+#befHistory{
+    height:100%;
+}
+#befSukhothai{
+    background-color: #C0E9F7;
+}
+.coin-info{
+    position: fixed;
+    display: table;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    background: #9B90B3;
+    top: 25%;
+    left: 25%;
+    z-index: 1;
+    transition: 1s;
+}
+.coin-info[acivate]{
+    width: 50vw;
+    height: 50vh;
+}
+.info-image{
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+}
+.info-text{
+    position: relative;
+    width: 25vw;
+}
+.table-cell{
+    display: table-cell;
+    justify-content: center;
+    vertical-align: middle;
+}
+.table{
+    display: table;
+    position: relative;
+    width: 40%;
+    margin-left: 12.5%;
+}
+.closeBtn{
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
+    position: absolute;
+    right: 1%;
+    top: 1%
+}
+.cointype{
+    left: 2.5vw;
+}
+.plus{
+    position: absolute;
+    left: 82%;
+    top: 47%;
+    width: 4vw;
+    transform: rotate(-16deg);
+}
+.triangle{
+    width: 4vw;
+    position: absolute;
+    left: 26.5vw;
+    top: 53%;
+}
+.triangle[data-arrow="arrow1"]{
+    width: 4vw;
+    position: absolute;
+    left: 49.6vw;
+    top: 53%;
+}
+.triangle[data-arrow="arrow2"]{
+    width: 5vw;
+    position: absolute;
+    left: 69.5vw;
+    top: 49%;
+}
