@@ -14,18 +14,19 @@
     <link rel="stylesheet" href="./css/rattanakosin.css">
     <link rel="stylesheet" href="./css/ayuthaya.css">
     <link rel="stylesheet" href="./css/comic.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>เหรียญวิเศษของคุณยาย</title>
 </head>
 <body>
     <!-- nav-bar -->
     <div id="nav" class="nav">
         <div class="timeline" @click="isActivate = !isActivate">
-            <h3>Timeline</h3>
+            <h3>Menu</h3>
             <div class="icon"></div>
         </div>
         <div class="menu" :activate="isActivate">
             <ul>
-                <a v-for="item in items" :href=item.to><li :style="{background: item.color }" >{{ item.title }}</li></a>
+                <a v-for="item in items" @click="scrollTo(item.to)" class="clickAble"><li :style="{background: item.color }" >{{ item.title }}</li></a>
             </ul>
         </div>
     </div>
@@ -33,7 +34,9 @@
 
     <!-- Home page -->
     <div id="home">
-        <img class="title" src="pic/head.svg"/>
+        <div class="title">
+            เงินวิเศษ
+        </div>
         <img class="title_bg" src="pic/Title_Img/title2.PNG"/>
         <div class="subtitle">
             <h2>ของคุณยาย</h2>
@@ -44,51 +47,50 @@
      <!-- Story -->
      <section id="story" style="padding-top: 20%">
         <div class="comic_container">
-            <p class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
-            <img class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
-            <p class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
-            <img class="scene" data-status="hide" src="./pic/comic/open/scene1_2.jpeg"></img>
-            <img class="scene" src="./pic/comic/open/scene2.jpeg"></img>
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
+            <img id="scene1" data-hasSubScene="true" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
+            <img id="subScene1" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
+            <img id="scene2" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene2.jpeg"></img>
             <div class="table" style="width: 75%; padding-top: 5%;">
-                <p class="text-center table-cell" style="width: 32.5%; position: relative;">
+                <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center table-cell" style="width: 32.5%; position: relative;">
                     แต่ที่น้องฟรังก์สนใจที่สุด ก็คือ...
                     <br>
                     <br>
-                    <b style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
+                    <b data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
                     <br>
                     น่ะสิ !
                 </p>
-                <img class="scene table-cell" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
+                <img id="scene3" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene table-cell" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
             </div>
-            <img class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
-            <p class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
+            <img id="scene4" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
                 ตกดึกวันนั้น<br>
                 น้องฟรังก์จึงพยายามหยิบเงินวิเศษในกล่อง<br>
                 ลงมาดูจากชั้นวางของ<br>
             </p>
-            <img class="scene" src="./pic/comic/open/scene5.jpeg"></img>
-            <b class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
+            <img id="scene5" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene5.jpeg"></img>
+            <b data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
                 เคร๊ง!
             </b>
-            <p class="align-center" style="padding-bottom: 15%">
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="padding-bottom: 15%">
                 “ไม่นะ!” น้องฟรังก์อุทาน<br>
                 กล่องของคุณยายหล่นลงมาจากชั้น<br>
                 แถมเงินวิเศษก็กระจัดกระจายไปหมด!<br>
             </p> 
-            <img class="scene" src="./pic/comic/open/scene6.jpeg"></img>
-            <p class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
+            <img id="scene6" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene6.jpeg"></img>
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
                 น้องฟรังก์พยายามตามหาเงินทั้งหมด<br>
                 แต่ก็ไม่พบสักที
             </p>
-            <p class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
+            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
                 ด้วยความง่วง และไม่รู้จะทำอย่างไรดี<br>
                 คืนนี้ก็เลยขอกลับมานอนพักก่อน
             </p>
-            <img class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
-            <img class="scene" data-status="hide" src="./pic/comic/open/scene7_2.jpeg"></img>
+            <img id="scene7" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" style="padding-bottom: 20%;" class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
         </div>
     </section>
-
+    <script src="comic.js"></script>
     <!-- ยุคก่อนประวัติศาสตร์ -->
     <section id="befHistory">
 
@@ -199,11 +201,11 @@
                 <img class="info-image" :src="i.image"/>
             </div>
             <div class="table-cell">
-                <p class="info-text">
+                <p class="info-text defaultText">
                     {{ i.info }}
                 </p>
             </div>
-            <div class="closeBtn clickAble" @click="i.status = false"><p style="position: absolute;top: -125%; width: 100%;"> x </p></div>    
+            <div class="closeBtn clickAble" @click="i.status = false"><p class="defaultText" style="position: absolute;top: -200%; width: 100%;"> x </p></div>    
         </div>
 
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"/>
@@ -418,9 +420,10 @@
             <img class="wavelaw1" src="pic/BefHis_Asset/wave.svg">
         </div>
     </section> 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="sprite.js"></script>
     <script>
+        AOS.init()
         // const allSection = [home,story,befHistory, befSukhothai, sukhothai, ayuthaya, thonburi, rattanakosin]
         // allSection.forEach((el, index) => {
         //     // el.style.background = nav.items[index].color

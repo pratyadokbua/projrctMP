@@ -1,10 +1,11 @@
-HTML, body, :root{
+html, body, :root{
     margin: 0;
     background: #BFE9F7;
     font-family: 'Itim';
     font-size: 2vw;
     color: #238AAB;
     scroll-behavior: smooth;
+    overflow-x: hidden;
     --continerSize: 70vw;
     --containerPosition: calc((100vw - var(--continerSize))/2)
 }
@@ -29,4 +30,5 @@ HTML, body, :root{
 }
 section{
     position: relative;
+    overflow-y: hidden;
 }

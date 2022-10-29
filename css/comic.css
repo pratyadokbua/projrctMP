@@ -4,16 +4,22 @@
     width: 60%;
     display: block;
     margin: auto;
+    height: auto;
     overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
 }
 .comic_container p{
     font-size: 2vw;
+    transition: 1s;
 }
 .comic_container b{
     color: #F1592A;
     font-weight:normal;
     font-size: 2.5vw;
+    transition: 1s;
 }
+
 .comic_container .align-center{
     width: 60%;
     position: relative;
@@ -25,6 +31,17 @@
     position: relative;
     left: 10%;
     width: 80%;
+    transition: 1s;
+}
+.comic_container .subScene{
+    position:relative;
+    left: 10%;
+    width: 80%;
+    opacity: 0;
+    transition: 1s;
+}
+.comic_container .scene[data-hasSubScene="true"]{
+    position: absolute;
 }
 .comic_container .scene[data-scene="3"]{
     width: 80%;
