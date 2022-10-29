@@ -4,83 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/befHistory.css">
     <link rel="stylesheet" href="./css/sukhothai.css">
     <link rel="stylesheet" href="./css/rattanakosin.css">
     <link rel="stylesheet" href="./css/ayuthaya.css">
-    <title>เหรียญวิเศษ</title>
-    <style>
-        HTML, body, :root{
-            margin: 0;
-            background: #BFE9F7;
-            font-family: 'Itim';
-            font-size: 1vw;
-            scroll-behavior: smooth;
-            --continerSize: 70vw;
-            --containerPosition: calc((100vw - var(--continerSize))/2)
-        }
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        #home{
-            position: relative;
-            margin-top: -15%
-        }
-        .container{
-            scroll-behavior: smooth;
-            width: var(--continerSize);
-            position: relative;
-            display: block;
-            margin: auto;
-            overflow-x: hidden;
-            top:0;
-        }
-        /* title */
-        .title{
-            position: absolute;
-            width: 50%;
-            left: 25%;
-            top: 10%;
-        }
-        .title_bg{
-            padding-top: 17.5%;
-            width: 100%;
-        }
-        #home{
-            text-align: center;
-        }
-        .subtitle{
-            position: absolute;
-            width: 50%;
-            left: 25%;
-            color: #238AAB;
-            top: 30%;
-            z-index: 1;
-            line-height: 100%;
-        }
-        .subtitle h2{
-            font-style: normal;
-            font-size: 3vw;
-        }
-        .subtitle h3{
-            font-style: normal;
-            font-size: 2vw;
-        }
-        section{
-            position: relative;
-        }
-        .clickAble{
-            cursor: pointer;
-        }
-
-
-        .defaultText{
-            font-size: 2vw;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/comic.css">
+    <title>เหรียญวิเศษของคุณยาย</title>
 </head>
 <body>
     <!-- nav-bar -->
@@ -108,7 +42,51 @@
     </div>
 
      <!-- Story -->
-     <section id="story">
+     <section id="story" style="padding-top: 20%">
+        <div class="comic_container">
+            <p class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
+            <img class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
+            <p class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
+            <img class="scene" data-status="hide" src="./pic/comic/open/scene1_2.jpeg"></img>
+            <img class="scene" src="./pic/comic/open/scene2.jpeg"></img>
+            <div class="table" style="width: 75%; padding-top: 5%;">
+                <p class="text-center table-cell" style="width: 32.5%; position: relative;">
+                    แต่ที่น้องฟรังก์สนใจที่สุด ก็คือ...
+                    <br>
+                    <br>
+                    <b style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
+                    <br>
+                    น่ะสิ !
+                </p>
+                <img class="scene table-cell" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
+            </div>
+            <img class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
+            <p class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
+                ตกดึกวันนั้น<br>
+                น้องฟรังก์จึงพยายามหยิบเงินวิเศษในกล่อง<br>
+                ลงมาดูจากชั้นวางของ<br>
+            </p>
+            <img class="scene" src="./pic/comic/open/scene5.jpeg"></img>
+            <b class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
+                เคร๊ง!
+            </b>
+            <p class="align-center" style="padding-bottom: 15%">
+                “ไม่นะ!” น้องฟรังก์อุทาน<br>
+                กล่องของคุณยายหล่นลงมาจากชั้น<br>
+                แถมเงินวิเศษก็กระจัดกระจายไปหมด!<br>
+            </p> 
+            <img class="scene" src="./pic/comic/open/scene6.jpeg"></img>
+            <p class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
+                น้องฟรังก์พยายามตามหาเงินทั้งหมด<br>
+                แต่ก็ไม่พบสักที
+            </p>
+            <p class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
+                ด้วยความง่วง และไม่รู้จะทำอย่างไรดี<br>
+                คืนนี้ก็เลยขอกลับมานอนพักก่อน
+            </p>
+            <img class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
+            <img class="scene" data-status="hide" src="./pic/comic/open/scene7_2.jpeg"></img>
+        </div>
     </section>
 
     <!-- ยุคก่อนประวัติศาสตร์ -->
@@ -141,7 +119,7 @@
                 <img class="character" style="position: relative; z-index: 1;" src="pic/BefHis_Asset/IMG_9528.PNG"/>
                 <img class="character" style="position: absolute; margin-top:0%; left: 10%;" src="pic/BefHis_Asset/star.svg"/>
             </div> 
-            <div class="info defaultText">
+            <div class="info">
                 <p>อย่างเอาขวานไปแลกกับเนื้อสัตว์</p>
             </div>
             <div class="character_container" data-character ="shell">
@@ -160,7 +138,7 @@
                 <img class="character" style="position: relative; z-index: 1;" src="pic/BefHis_Asset/IMG_9618.PNG"/>
                 <img class="character" style="position: absolute; margin-top:0%; left: 35%; top: 6%; width: 60%;" src="pic/BefHis_Asset/circle/circle-Buffalo.svg"/>
             </div>
-            <div class="info defaultText" data-direction="left">
+            <div class="info" data-direction="left">
                 <p>ต่อมาก็มีการใช้สิ่งของมีค่าที่ทั้งสองฝ่ายต้องการ เป็นสื่อกลางการแลกเปลี่ยน เช่นเปลือกหอย
                     เมล็ดพืช ปศุสัตว์ ลูกปัด ขวานทองแดง หัวธนู
                 </p>
@@ -189,7 +167,7 @@
             <div class="character_container" data-character ="silver">
                 <img class="character" src="pic/BefHis_Asset/IMG_9539.PNG"/>
             </div>
-            <div class="info defaultText" data-direction="right">
+            <div class="info" data-direction="right">
                 <p>
                     ในที่สุดได้นำโลหะทองแดง โลหะเงิน โลหะทอง ซึ่งหายาก <br>มาใช้เป็นสื่อกลางในการแลกเปลี่ยน
                 </p>
@@ -207,7 +185,7 @@
 
     <!-- ยุคสมัยก่อนสุโขทัย -->
     <section id="befSukhothai">
-        <div class="info defaultText" data-direction="befSukhotext1">
+        <div class="info" data-direction="befSukhotext1">
             <h1>หลังจากนั้นอณาจักรไทยได้รับอิทธิพลมาจากอินเดีย<br>เกิดเป็นเหรียญเงินตรอกตรา</h1>
         </div><br><br>
         <!-- coin -->
@@ -232,7 +210,7 @@
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"data-arrow="arrow1"/>
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"data-arrow="arrow2"/>
 
-        <div class="table" style="margin-top:-2.5vw;">
+        <div class="table" style="margin-top:-2.5vw; width: 40%;">
             <div class="info table-cell" data-direction="funancoin">
                 <p>อณาจักรฟูนัน</p>
             </div>
@@ -243,7 +221,7 @@
                 <p>อณาจักรศรีวิชัย</p>
             </div>
         </div>
-        <div class="info defaultText" data-direction="befSukhotext1">
+        <div class="info" data-direction="befSukhotext1">
             <h1>สัญลักษณ์บนเหรียญสื่อถึงความเชื่อทางศาสนาพราหมณ์<br>อำนาจรัฐ กษัตริย์ และความมั่งคั่งอุดมสมบูรณ์</h1>
         </div>
     </section>
@@ -271,7 +249,7 @@
             <img class='txt3' src="pic/BefHis_Asset/tape.svg"/>
             <div class="centered";>เงินตราพดด้วง<br><div class="centered2">สุโขทัย</div></div>
         </div>
-        <div class="txt defaultText">
+        <div class="txt">
             สมัยสุโขทัยถือว่าเป็นจุดเริ่มต้นของการผลิตเงินตรา<br>
              ที่มีรูปแบบเฉพาะตัว ได้แก่ ‘เงินพดด้วง’ <br>
                 เป็นยุคที่มีความเจริญทางการค้าขายเป็นอย่างมาก <br>
@@ -291,7 +269,7 @@
                 เป็นปลายแหลม</div>
             <div class="arrowtxt4">มีรูขนาดใหญ่ระหว่างขา</div>
         </div>
-        <div class="txt3 defaultText">
+        <div class="txt3">
             ส่วนตราที่ประทับมี 7 ตราส่วนใหญ่ ได้แก่
         </div>
         <div class="coinall">
@@ -324,7 +302,7 @@
             <img class ='frunc' src="pic/Character/Frunk/frunk_shell.PNG">
             <img class ='incoin2' src="pic/allCoin_dicut/coin-01.png"/>
         </div>
-        <div class="txt6 defaultText">
+        <div class="txt6">
             และมีการใช้ ‘เบี้ย’ ซึ่งเป็นเปลือกหอย<br>
             เป็นเงินปลีกสําหรับแลกเปลี่ยนสินค้าราคาต่ำ
         </div>

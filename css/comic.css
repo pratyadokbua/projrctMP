@@ -1,0 +1,40 @@
+ /* comic */
+ .comic_container{
+    background: #FFFFFF;
+    width: 60%;
+    display: block;
+    margin: auto;
+    overflow-x: hidden;
+}
+.comic_container p{
+    font-size: 2vw;
+}
+.comic_container b{
+    color: #F1592A;
+    font-weight:normal;
+    font-size: 2.5vw;
+}
+.comic_container .align-center{
+    width: 60%;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+.comic_container .scene{
+    display: block;
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+.comic_container .scene[data-scene="3"]{
+    width: 80%;
+    left: 20%;
+}
+.comic_container .scene[data-scene="4"]{
+    width: 25%;
+    padding-top: 40%;
+}
+
+.comic_container .scene[data-status="hide"]{
+    display: none;
+}

@@ -1,0 +1,32 @@
+HTML, body, :root{
+    margin: 0;
+    background: #BFE9F7;
+    font-family: 'Itim';
+    font-size: 2vw;
+    color: #238AAB;
+    scroll-behavior: smooth;
+    --continerSize: 70vw;
+    --containerPosition: calc((100vw - var(--continerSize))/2)
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.table-cell{
+    display: table-cell;
+    justify-content: center;
+    vertical-align: middle;
+}
+.table{
+    display: table;
+    position: relative;
+    margin-left: 12.5%;
+}
+.clickAble{
+    cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+section{
+    position: relative;
+}
