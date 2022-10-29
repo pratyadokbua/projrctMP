@@ -1,0 +1,152 @@
+/* thonburi*/
+#thonburi{
+    height:100%;
+}
+.character_container[data-character ="frunk_thon"]{
+    transform: scaleX(-1) rotate(7deg);
+    top:-8vw;
+    left:10vw;
+    
+}
+.character_container[data-character ="poj_thon"]{
+    top:-3.5vw;
+    left:64vw;
+}
+
+
+
+.character_container[data-character ="line"]{
+    position: relative;
+    width: .2%;
+    height: 30vw;
+    left: 50%;
+    margin-top: 0%;
+}
+
+.character_container[data-character ="pojduang_sideup"]{
+    top:-9vw;
+    left:20vw;
+}
+.character_container[data-character ="pojduang_sideface"]{
+    top:-21.7vw;
+    left:57.5vw;
+}
+
+.topic[data-era="thonburi"]{
+    width: 20%;
+    left: 32vw;
+    transform: rotate(0deg);
+}
+.topic_text[data-era="thonburi"]{
+    transform: rotate(-17deg);
+    font-size: 2.4vw;
+    left: 36%;
+    top: 35%;
+}
+.txt3[data-era="thonburi"]{
+    margin-top: 0%;
+    font-size:1.5vw;
+}
+.buble[data-buble ="thon_bub1"]{
+    position: absolute;
+    width: 22%;
+    height: 30%;
+    top: 8%;
+    left: 27%;
+}
+.buble_text[data-buble ="thon_bub1"]{
+    font-size: 1.5vw;
+    top:43%;
+    left:31%;
+    width:50%;
+}
+
+.buble[data-buble ="thon_bub2"]{
+    position: absolute;
+    width: 22%;
+    height: 35%;
+    top: 10%;
+    left: 45%;
+}
+.buble_text[data-buble ="thon_bub2"]{
+    font-size: 1.5vw;
+    top:44%;
+    left:20%;
+    width:50%;
+}
+.info[data-direction ="thontext1"]{
+    width: 100vw;
+    left: 0;
+    font-size: 1.5vw;
+    font-weight: lighter;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    transform: rotate(0deg);
+    filter:none;
+    color:#FDFFF4;
+    background-color: transparent;
+}
+.info[data-direction ="side_title"]{
+    width: 6vw;
+    left: 28vw;
+    top: -30.5vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    font-weight: lighter;
+    border-radius: 100px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    transform: rotate(0deg);
+    filter:none;
+    color:#F1592A;
+    background-color: #FED386;
+}
+.info[data-direction ="side_title2"]{
+    width: 6vw;
+    left: 65vw;
+    top: -43.3vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    font-weight: lighter;
+    border-radius: 100px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    transform: rotate(0deg);
+    filter:none;
+    color:#F1592A;
+    background-color: #FED386;
+}
+
+.pojduang_side{
+    background-color: #938AAA;
+    width: 100%;
+}
+
+.sideinfo{
+    position: relative;
+    top:-30vw;
+    color:#FDFFF4;
+    font-size: 1.5vw;
+    left:27vw;
+}
+.sideinfo2{
+    position: relative;
+    top:-15vw;
+    color:#FDFFF4;
+    font-size: 1.5vw;
+    left:27vw;
+}
+.sideinfo3{
+    position: relative;
+    top:-42.5vw;
+    color:#FDFFF4;
+    font-size: 1.5vw;
+    left:64vw;
+}
+.sideinfo4{
+    position: relative;
+    top:-27.5vw;
+    color:#FDFFF4;
+    font-size: 1.5vw;
+    left:67vw;
+}
