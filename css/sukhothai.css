@@ -1,4 +1,3 @@
-/* sukhothai */
 #sukhothai{
     height:100%;
 }
@@ -54,13 +53,13 @@
     margin-top: 5%;
 }
 .coin{
-    width: 30%;
+    width: 100%;
     
 }
 .incoin{
-    width: 100%;
-    margin-left: 115%;
-    margin-top: 20%;
+    width: 33%;
+    margin-top: 10%;
+    margin-left: 32%;
     transform: rotate(20deg);
     filter: drop-shadow(5px 2px 4px #c9bca4);
 }
@@ -190,3 +189,71 @@
     font-size: 1.5vw;
     width: 100%;
   }
+.arrow{
+    position: absolute;
+    width: 12%;
+    left: 54.5%;
+    top: 40%;
+}
+.arrow2{
+    position: absolute;
+    width: 15%;
+    left: 33.5%;
+    top: 38.5%;
+}
+.arrow3{
+    position: absolute;
+    width: 12%;
+    left: 32%;
+    top: 47%;
+}
+.arrow4{
+    position: absolute;
+    width: 13%;
+    left: 47.5%;
+    top: 45%;
+}
+.arrowtxt{
+    position: absolute;
+    width: 14%;
+    left: 21%;
+    top: 38%;
+    font-size:1.7vw;;
+    text-align: center;
+    font-family:'Itim';
+    margin-top: -1%;
+    color: #73a967;
+}
+.arrowtxt2{
+    position: absolute;
+    width: 13%;
+    left: 66.5%;
+    top: 39.8%;
+    font-size:1.7vw;;
+    text-align: center;
+    font-family:'Itim';
+    margin-top: -1%;
+    color: #73a967;
+}
+.arrowtxt3{
+    position: absolute;
+    width: 13%;
+    left: 19%;
+    top: 47.5%;
+    font-size:1.7vw;;
+    text-align: center;
+    font-family:'Itim';
+    margin-top: -1%;
+    color: #73a967;
+}
+.arrowtxt4{
+    position: absolute;
+    width: 20%;
+    left: 59.5%;
+    top: 47.5%;
+    font-size:1.7vw;;
+    text-align: center;
+    font-family:'Itim';
+    margin-top: -1%;
+    color: #73a967;
+}
