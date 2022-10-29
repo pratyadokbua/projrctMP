@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./css/sukhothai.css">
     <link rel="stylesheet" href="./css/rattanakosin.css">
     <link rel="stylesheet" href="./css/ayuthaya.css">
+    <link rel="stylesheet" href="./css/thonburi.css">
     <title>เหรียญวิเศษ</title>
     <style>
         HTML, body, :root{
@@ -397,6 +398,53 @@
     
     <!-- ยุคกรุงธนบุรี -->
     <section id="thonburi">
+        <img class="bef_history_bg" src="pic/Title_Img/thonburi.PNG"/>
+
+        <div class="topic" data-era="thonburi">   
+            <img class='txt3' src="pic/BefHis_Asset/tape.svg" data-era="thonburi"/>
+            <div class="topic_text" data-era="thonburi">ธนบุรี</div>
+        </div>
+
+        <div class="buble" data-buble ="thon_bub1">
+            <img class="character" src="pic/Textbox/Box-03.svg" style="transform:scale(-1,1);"/>
+            <div class="buble_text" data-buble ="thon_bub1">เย็นขนาดนี้แล้ว<br>เหรอเนี่ย<br>คิดถึงคุณยายจัง...</div>
+        </div>
+
+        <div class="buble" data-buble ="thon_bub2">
+            <img class="character" src="pic/Textbox/Box-03-green.svg" style="transform:scale(1,1);"/>
+            <div class="buble_text" data-buble ="thon_bub2">เดี๋ยวก็ได้<br>กลับบ้านแล้ว<br>สู้ๆน้องฟรังก์!</div>
+        </div>
+
+        <div class="character_container" data-character ="frunk_thon">
+            <img class="character" src="pic/Character/Frunk/frunk_ayutthaya.PNG"/> 
+        </div>
+        <div class="character_container" data-character ="poj_thon">
+            <img class="character" src="pic/Character/Pojduang/IMG_9620.PNG"/> 
+        </div>
+        <div class="info defaultText" data-direction="thontext1">
+            <p>เงินตราที่ใช้ในช่วงต้นรัชกาลยังคงใช้พดด้วงของอยุธยา<br>อยู่ระยะหนึ่ง ต่อมาได้ผลิตพดด้วงประจํารัชกาลออกใช้<br>มีลักษณะเช่นเดียวกับพดด้วงสมัยอยุธยาตอนปลาย</p>
+        </div> 
+        
+        <div class="pojduang_side">
+            <div class="character_container" data-character ="line">
+                <img class="character" src="pic/BefHis_Asset/line.png"/> 
+            </div>
+            <div class="side">
+                <p class="info" data-direction="side_title">ด้านบน</p>
+                <p class="sideinfo">ตราประจำแผ่นดิน</p>
+                <div class="character_container" data-character ="pojduang_sideup">
+                    <img class="character" src="pic/allCoin_dicut/coin-14.png"/> 
+                </div>
+                <p class="sideinfo2">ตราพระแสงจักร</p>
+
+                <p class="info" data-direction="side_title2">ด้านหน้า</p>
+                <p class="sideinfo3">ตราประจำราชกาล</p>
+                <div class="character_container" data-character ="pojduang_sideface">
+                    <img class="character" src="pic/allCoin_dicut/coin-12.png"/> 
+                </div>
+                <p class="sideinfo4">ตราตรีศูล</p>
+            </div>
+        </div>
     </section> 
 
     <!-- ยุคกรุงรัตนโกสินทร์ -->
@@ -453,6 +501,7 @@
         befHistory.style.background = "#ffecd4"
         befSukhothai.style.background = "#C0E9F7"
         sukhothai.style.background = "#ffefd1"
+        thonburi.style.background = "#938AAA"
         console.log(window.scroolY)
         document.addEventListener('scroll', (e) => {
         })
