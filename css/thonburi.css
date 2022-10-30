@@ -29,7 +29,7 @@
 }
 .character_container[data-character ="pojduang_sideface"]{
     top:-21.7vw;
-    left:57.5vw;
+    left:56vw;
 }
 
 .topic[data-era="thonburi"]{
@@ -141,12 +141,12 @@
     top:-42.5vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:64vw;
+    left:63.8vw;
 }
 .sideinfo4{
     position: relative;
     top:-27.5vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:67vw;
+    left:66vw;
 }
