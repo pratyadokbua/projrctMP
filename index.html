@@ -7,6 +7,9 @@
     <script src="vue.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/character.css">
+    <link rel="stylesheet" href="./css/prologue.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/befHistory.css">
@@ -14,10 +17,20 @@
     <link rel="stylesheet" href="./css/rattanakosin.css">
     <link rel="stylesheet" href="./css/ayuthaya.css">
     <link rel="stylesheet" href="./css/comic.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>เหรียญวิเศษของคุณยาย</title>
 </head>
-<body>
+<body onload="hideLoader()">
+    <div class="loading" data-active="true">
+        <p class="loading-text text-center" aria-label="Loading">
+            <span class="letter" aria-hidden="true">L</span>
+            <span class="letter" aria-hidden="true">o</span>
+            <span class="letter" aria-hidden="true">a</span>
+            <span class="letter" aria-hidden="true">d</span>
+            <span class="letter" aria-hidden="true">i</span>
+            <span class="letter" aria-hidden="true">n</span>
+            <span class="letter" aria-hidden="true">g</span>
+        </p>
+    </div>
     <!-- nav-bar -->
     <div id="nav" class="nav">
         <div class="timeline" @click="isActivate = !isActivate">
@@ -47,50 +60,118 @@
      <!-- Story -->
      <section id="story" style="padding-top: 20%">
         <div class="comic_container">
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
-            <img id="scene1" data-hasSubScene="true" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
-            <img id="subScene1" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
-            <img id="scene2" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene2.jpeg"></img>
+            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
+            <div class="box">
+                <img id="scene1" data-type="scene" data-subScene="#subScene1" data-aos="fade-up" class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
+                <img id="subScene1" data-type="sub-scene" data-transition="2" data-aos="fade" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene1.PNG" style="width: 100%;top:0; left: 0"></img>
+            </div>
+            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
+            <div class="box">
+                <img id="scene2" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene2.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_2.PNG" style="width: 20%;top:25%; left: 3%"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_1.PNG" style="width: 35%;top:-10%; left: 22.5%"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_3.PNG" style="width: 20%;top:15%; right: 5%"></img>
+            </div>
             <div class="table" style="width: 75%; padding-top: 5%;">
-                <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="text-center table-cell" style="width: 32.5%; position: relative;">
+                <p data-aos="fade-up" class="text-center table-cell" style="width: 32.5%; position: relative;">
                     แต่ที่น้องฟรังก์สนใจที่สุด ก็คือ...
                     <br>
                     <br>
-                    <b data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
+                    <b data-aos="fade-up" style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
                     <br>
                     น่ะสิ !
                 </p>
-                <img id="scene3" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene table-cell" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
+                <div class="box table-cell">
+                    <img id="scene3" data-type="scene" data-aos="fade-up" class="scene" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
+                    <img data-aos="fade" data-type="props" data-animation="winky" class="props" src="./pic/comic/open/effectScene3.PNG" style="width: 20%;top:27.5%; right: 0"></img>
+                </div>
             </div>
-            <img id="scene4" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
+            <div class="box">
+                <img id="scene4" data-type="scene" data-aos="fade-up" class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
+            </div>
+            <p data-aos="fade-up" class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
                 ตกดึกวันนั้น<br>
                 น้องฟรังก์จึงพยายามหยิบเงินวิเศษในกล่อง<br>
                 ลงมาดูจากชั้นวางของ<br>
             </p>
-            <img id="scene5" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene5.jpeg"></img>
-            <b data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
+            <div class="box">
+                <img id="scene5" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene5.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene5.PNG" style="width: 100%;top:0; left: 0"></img>
+            </div>
+            <b data-aos="fade-up" class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
                 เคร๊ง!
             </b>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center" style="padding-bottom: 15%">
+            <p data-aos="fade-up" class="align-center" style="padding-bottom: 15%">
                 “ไม่นะ!” น้องฟรังก์อุทาน<br>
                 กล่องของคุณยายหล่นลงมาจากชั้น<br>
                 แถมเงินวิเศษก็กระจัดกระจายไปหมด!<br>
-            </p> 
-            <img id="scene6" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="scene" src="./pic/comic/open/scene6.jpeg"></img>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
+            </p>
+            <div class="box">
+                <img id="scene6" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene6.jpeg"></img>
+            </div>
+            <p data-aos="fade-up" class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
                 น้องฟรังก์พยายามตามหาเงินทั้งหมด<br>
                 แต่ก็ไม่พบสักที
             </p>
-            <p data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
+            <p data-aos="fade-up" class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
                 ด้วยความง่วง และไม่รู้จะทำอย่างไรดี<br>
                 คืนนี้ก็เลยขอกลับมานอนพักก่อน
             </p>
-            <img id="scene7" data-aos="fade-up" data-aos-easing="linear" data-aos-anchor-placement="top-center" style="padding-bottom: 20%;" class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
+            <div class="box">
+                <img id="scene7" data-type="scene" data-subScene="#subScene7" data-aos="fade-up" style="padding-bottom: 20%;" class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
+                <img id="subScene7" data-type="sub-scene" data-aos="fade" style="padding-bottom: 20%;" class="subScene" src="./pic/comic/open/scene7_2.jpeg"></img>
+            </div>
+        </div>
+        <div class="prologue">
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9622.PNG"/>
+                <div data-aos="fade-up" class="textBox">
+                    <img src="./pic/Textbox/Box-02.svg" style="transform: rotate(2deg);"/>
+                    <p class="text">สวัสดี<br>น้องฟรังก์</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5747.PNG"/>
+                <div data-aos="fade-up" class="textBox" data-posX="100%">
+                    <img src="./pic/Textbox/Box-03.svg" scale="1.5" style="transform: rotate(2deg);"/>
+                    <p class="text" style="left: -7.5%">คุณเป็นใคร<br>
+                        แล้วหนูมาอยู่ที่นี่<br>
+                        ได้ยังไง</p>
+                </div>
+            </div>
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9545.PNG"/>
+                <div data-aos="fade-up" class="textBox" style="left: 95%;">
+                    <img src="./pic/Textbox/Box-02.svg" scale="1.5"/>
+                    <p class="text">ฉันคือ<br>
+                        จิตวิญญาณพดด้วง<br>
+                        ในกล่องของคุณยาย<br>
+                        ยังไงล่ะ</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5746.PNG"/>
+                <div data-aos="fade-up" class="textBox" data-posX="100%" data-posY="-15%" >
+                    <img src="./pic/Textbox/Box-03.svg" scale="1.7" style="transform: rotate(5deg);"/>
+                    <p class="text" style="left: -7.5%">เหรียญของคุณยาย! <br>
+                    หนูต้องเอาไปคืนคุณยาย <br>
+                    หนูอยากกลับบ้าน </p>
+                </div>
+            </div>
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9549.PNG" style="transform: scaleX(-1);"/>
+                <div data-aos="fade-up" class="textBox" style="left: 95%;">
+                    <img src="./pic/Textbox/Box-02.svg" scale="1.3"/>
+                    <p class="text">ไม่ต้องห่วงนะ <br>
+                        เดี๋ยวฉันจะช่วยเธอเอง</p>
+                </div>
+            </div>
+            
         </div>
     </section>
-    <script src="comic.js"></script>
+    <script src="animateOnScroll.js"></script>
+
     <!-- ยุคก่อนประวัติศาสตร์ -->
     <section id="befHistory">
 
@@ -101,7 +182,7 @@
                 <div class="topic_text";>ยุคก่อนประวัติศาสตร์</div>
             </div>
 
-            <div class="character_container "style="transform: scaleX(-1);">
+            <div class="character_container "style="left: 25%;margin-top: -26%;transform: scaleX(-1);">
                 <img class="character" src="pic/Character/Pojduang/IMG_9545.PNG"/> 
             </div>
 
@@ -420,29 +501,7 @@
             <img class="wavelaw1" src="pic/BefHis_Asset/wave.svg">
         </div>
     </section> 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="sprite.js"></script>
-    <script>
-        AOS.init()
-        // const allSection = [home,story,befHistory, befSukhothai, sukhothai, ayuthaya, thonburi, rattanakosin]
-        // allSection.forEach((el, index) => {
-        //     // el.style.background = nav.items[index].color
-        //     console.log(el.getBoundingClientRect())
-        //     console.log(el.getBoundingClientRect().top)
-        // });
-
-        befHistory.style.background = "#ffecd4"
-        befSukhothai.style.background = "#C0E9F7"
-        sukhothai.style.background = "#ffefd1"
-        console.log(window.scroolY)
-        document.addEventListener('scroll', (e) => {
-        })
-        // const ctx = canvas.getContext("2d")
-        // let imgPath = "https://cdn.discordapp.com/attachments/1007998666616869008/1019958140554461305/unknown.png"
-        // let sprite = new Sprite(imgPath);
-        // sprite.createImage()
-        // sprite.append(container)
-        // setInterval(()=>{sprite.move()}, 100)
-    </script>
+    <script src="body.js"></script>
 </body>
 </html>

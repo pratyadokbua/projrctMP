@@ -3,17 +3,7 @@
 .bef_history_bg{
     width: 100%;
 }
-.character{
-    width: 100%;
-    height: 100%;
-}
-.character_container{
-    position: relative;
-    width: 25%;
-    left: 25%;
-    transform: scaleX(1);
-    margin-top: -26%;
-}
+
 .character_container[data-character ="axe_wood"]{
     margin-top: 5%;
     left: 20%;
