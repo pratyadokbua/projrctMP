@@ -150,3 +150,8 @@
     font-size: 1.5vw;
     margin-left:66vw;
 }
+.txt[data-direction="thontext1"]{
+    color:#FDFFF4;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
