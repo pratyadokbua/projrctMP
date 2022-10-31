@@ -29,8 +29,8 @@
     text-align: center;
     margin-top: 3%;
     padding: 10%;
-    border-radius: 2vh;
-    font-size: 2.5vh;
+    border-radius: 1vw;
+    font-size: 1.25vw;
 }
 .timeline{
     position: absolute;
@@ -55,7 +55,7 @@
     position: absolute;
     top: -50%;
     width: 100%;
-    font-size: 2vh;
+    font-size: 1vw;
     text-align: center;
     color: #959595;
 }

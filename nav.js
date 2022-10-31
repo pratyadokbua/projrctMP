@@ -4,12 +4,12 @@ let nav = new Vue({
         isActivate: false,
         items: [
             {
-                title: "Home Page",
+                title: "หน้าหลัก",
                 color: "#FFC635",
                 to: "#home"
             },
             {
-                title: "STORY",
+                title: "เนื่อเรื่อง",
                 color: "#F1592A",
                 to: "#story"
             },
