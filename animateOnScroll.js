@@ -39,10 +39,28 @@ function sceneLookUp(key, params, time){
   })
 }
 
+function animationLookUp(time){
+  var elGrp = document.querySelectorAll("[data-animation]");
+  elGrp.forEach((el)=>{
+    if(el.parentElement.classList.contains("active")){
+      setTimeout(()=>{
+        if(el.parentElement.classList.contains("active")){
+          el.classList.add(el.dataset.animation)
+        }else{
+          el.classList.remove(el.dataset.animation)
+        }
+      }, time)
+    }
+    else{
+      el.classList.remove(el.dataset.animation)
+    }
+  })
+}
+
 window.addEventListener("scroll", ()=>{
     AOS()
     sceneLookUp("[data-type='sub-scene']", "active", 1500)
     sceneLookUp("[data-type='props']", "active", 2000)
-    sceneLookUp("[data-animation]", "winky", 1500)
+    animationLookUp(500)
 
 })

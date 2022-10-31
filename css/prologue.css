@@ -1,4 +1,4 @@
-.prologue{
+.prologue, .epilogue{
     position: relative;
     display: block;
     padding-top: 10%;
@@ -6,18 +6,27 @@
     margin: auto;
 }
 
-.prologue .character_container{
+.epilogue{
+    display: flex;
+}
+
+.prologue .character_container, .epilogue .character_container{
     width: 30%;
     position: relative;
     margin-bottom: -11%;
     display: flex;
 }
-
-.prologue .pojduang{
+.epilogue .character_container{
+    margin-bottom: 0;
+}
+.prologue .pojduang, .epilogue .coinkung{
     left: 0;
 }
 .prologue .frunk{
     left: 70%;
+}
+.epilogue .frunk{
+    left: 45%;
 }
 .prologue .character_container:nth-child(odd){
     margin-bottom: -15%;
@@ -41,25 +50,17 @@
     z-index: 1;
     margin: 0;
 }
-.prologue .textBox{
+.prologue .textBox, .epilogue .textBox, .table-cell .textBox{
     left: 80%;
     top: -25%;
 }
-.prologue .textBox[data-posX="100%"]{
+.textBox[data-posX="100%"]{
     left: -100%;
 }
-.prologue .textBox[data-posY="-15%"]{
+.textBox[data-posY="-15%"]{
     top: -15%;
 }
-[scale="1.3"]{
-    scale: 1.3;
-}
-[scale="1.5"]{
-    scale: 1.5;
-}
-[scale="1.7"]{
-    scale: 1.7;
-}
+
 .text{
     display: flex;
     top: 0;
@@ -69,4 +70,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+}
+.orange{
+    color: #F1592A;
 }
