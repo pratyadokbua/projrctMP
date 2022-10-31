@@ -1,10 +1,12 @@
 function getCoin(el){
     let coins = document.querySelectorAll(`[data-coin=${ el.dataset.coin }]`)
     coins.forEach((coin)=>{
-        coin.dataset.found = true
+        if(coin.classList.contains("collect")){
+            coin.dataset.found = true
+        }
         if(coin.dataset.collectable){
             coin.style.display = "none"
-    }
+        }
     })
     let collectedCoin = document.querySelectorAll(`[data-found='true'`)
     console.log(collectedCoin.length)
