@@ -1,3 +1,7 @@
+.allGrat {
+    margin-top: -20%;
+}
+
 .rk_bg {
     width: 100%;
 }
@@ -115,7 +119,7 @@
     left: 48%;
     transform: rotate(355deg);
     border: 2px hidden;
-    padding: 3px 12px;
+    padding: 0.2vw 0.8vw;
     background-color: #3d9297;
     color: white;
     filter: drop-shadow(-1px 3px 2px #c9bca4);
@@ -127,7 +131,7 @@
     left: 48%;
     transform: rotate(6deg);
     border: 2px hidden;
-    padding: 3px 12px;
+    padding: 0.5vw 0.8vw;
     background-color: #ee7149;
     color: white;
     filter: drop-shadow(-1px 3px 2px #c9bca4);
@@ -139,7 +143,7 @@
     color: #248bab;
 }
 .textlaw1_moretop {
-    font-size: 1.5vw;
+    font-size: 2vw;
     margin-top: 10%;
     text-align: center;
     color: #248bab;
@@ -156,11 +160,11 @@
 .textlaw1_4 {
     position: absolute;
     font-size: 1.5vw;
-    top: 25%;
+    top: 46%;
     left: 34.5%;
     transform: rotate(10deg);
     border: 2px hidden;
-    padding: 3px 12px;
+    padding: 0.7vw 1.5vw;
     background-color: #ee7149;
     color: white;
     filter: drop-shadow(6px 3px 2px #c9bca4);
@@ -175,15 +179,234 @@
 .textlaw1_5 {
     position: absolute;
     font-size: 1.5vw;
-    top: 53%;
-    left: 53.6%;
+    top: 96%;
+    left: 53.5%;
     transform: rotate(345deg);
     border: 2px hidden;
-    padding: 3px 12px;
+    padding: 0.7vw 1.5vw;
     background-color: #ee7149;
     color: white;
     filter: drop-shadow(6px 3px 2px #c9bca4);
 }
 .wavelaw1 {
-    margin-top: -20%;
+    margin-top: 10%;
+}
+
+.Glaw1_6 {
+    position: relative;
+    width: 25%;
+    margin-top: -55%;
+    margin-left: 52%;
+}
+.textboxlaw1_6 {
+    width: 130%;
+    transform: rotate(4deg);
+}
+.textlaw1_6 {
+    position: absolute;
+    font-size: 2vw;
+    top:33%;
+    left:33%;
+    color: #248bab;
+    width:70%;
+    text-align: center;
+}
+.Gimglaw2 {
+    position: relative;
+    margin-top: -5%;
+}
+.textlaw2_1 {
+    position: absolute;
+    font-size: 2.2vw;
+    top: 25%;
+    left: 41%;
+    transform: rotate(357deg);
+    color: #3d9297;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw2_2 {
+    position: absolute;
+    font-size: 2vw;
+    top: 34%;
+    left: 20%;
+    transform: rotate(352deg);
+    border: 2px hidden;
+    padding: 0.2vw 10vw 0.2vw 0.8vw;
+    background-color: #ffcb06;
+    color: #3d9297;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw2_3 {
+    position: absolute;
+    font-size: 3vw;
+    top: 41%;
+    left: 20%;
+    transform: rotate(352deg);
+    border: 2px hidden;
+    padding: 0.5vw 10vw 0.5vw 0.8vw;
+    background-color: #ee7149;
+    color: white;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw2_footer {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 69%;
+    left: 48%;
+    color: #3d9297;
+    text-align: center;
+}
+.imglaw2 {
+    position: relative;
+    width: 42%;
+    margin-left: 40%;
+    margin-top: -10%;
+    z-index: 1;
+    transform: scaleX(-1);
+}
+.imgcir {
+    position: absolute;
+    width: 8%;
+    left: 52%;
+    top: 21%;
+}
+.Gimg2law2 {
+    position: relative;
+}
+.coin1law2 {
+    position: relative;
+    width: 25%;
+    left: 44.4%;
+    transform: rotate(343deg);
+    filter: drop-shadow(0px 3px 2px #c9bca4);
+}
+.textlaw2_4 {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 38%;
+    left: 32%;
+    transform: rotate(355deg);
+    border: 2px hidden;
+    padding: 0.7vw 1.5vw;
+    background-color: #ee7149;
+    color: white;
+    text-align: center;
+    filter: drop-shadow(6px 3px 2px #c9bca4);
+}
+.coinhidelaw2 {
+    position: absolute;
+    width: 8%;
+    left: 60%;
+    transform: rotate(341deg);
+}
+.textlaw2_footer2 {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #248bab;
+}
+.wavelaw2 {
+    margin-top: 0%;
+}
+.Gimglaw3 {
+    position: relative;
+    margin-top: -1%;
+}
+.imgStarlaw3 {
+    position: absolute;
+    width: 30%;
+    left: 42%;
+    top: -14%;
+}
+.imglaw3 {
+    position: relative;
+    margin-top: 2%;
+    left: 36%;
+    width: 32%;
+}
+.textlaw3_1 {
+    position: absolute;
+    font-size: 2.2vw;
+    top: 15%;
+    left: 53%;
+    transform: rotate(352deg);
+    border: 2px hidden;
+    padding: 0.2vw 0.8vw 0.2vw 3vw;
+    background-color: #e16863;
+    color: white;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw3_2 {
+    position: absolute;
+    font-size: 2vw;
+    top: 34%;
+    left: 14%;
+    transform: rotate(357deg);
+    border: 2px hidden;
+    padding: 0.2vw 3vw 0.2vw 0.8vw;
+    background-color: #ffcb06;
+    color: #3d9297;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw3_3 {
+    position: absolute;
+    font-size: 3vw;
+    top: 15%;
+    left: 17%;
+    transform: rotate(6deg);
+    border: 2px hidden;
+    border-radius: 30px;
+    padding: 0.5vw 5vw 0.5vw 0.8vw;
+    background-color: #3d9297;
+    color: white;
+    filter: drop-shadow(-1px 3px 2px #c9bca4);
+}
+.textlaw3_footer {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #248bab;
+    margin-bottom: 22%;
+}
+.Gimg2law3 {
+    position: relative;
+}
+.textlaw3_4 {
+    position: absolute;
+    font-size: 1.5vw;
+    top: 30%;
+    left: 27.7%;
+    transform: rotate(10deg);
+    border: 2px hidden;
+    padding: 0.7vw 2.5vw 0.7vw 1.5vw;
+    background-color: #c3c700;
+    color: white;
+    text-align: left;
+    filter: drop-shadow(3px 3px 1px #c9bca4);
+}
+.texboxlaw3 {
+    position: absolute;
+    width: 25%;
+    top: -42%;
+    left: 52%;
+    transform: rotate(20deg);
+}
+.castlelaw3 {
+    position: absolute;
+    width: 16%;
+    left: 56%;
+    top: -35%;
+}
+.coin1law3 {
+    position: relative;
+    width: 33%;
+    left: 44%;
+    filter: drop-shadow(0px 3px 1px #c9bca4);
+}
+.textlaw3_footer2 {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #248bab;
+    margin-top: -3%;
+}
+.wavelaw3 {
+    margin-top: 0%;
 }
