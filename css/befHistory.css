@@ -192,6 +192,7 @@ body{
     color:#8F663A;
     background-color: transparent;
     padding-left: 0;
+    padding-right: 0;
 }
 .info[data-direction ="funancoin"]{
     width: 10vw;
