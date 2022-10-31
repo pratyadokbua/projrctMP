@@ -1,5 +1,7 @@
 /* before history */
-
+body{
+    width: 100%;
+}
 .bef_history_bg{
     width: 100%;
 }
@@ -162,20 +164,20 @@
     padding-right: 2vw;
     font-size: 2vw;
     margin-top: 5% ;
-    margin-left: 37%;
+    left: 37%;
     font-weight: lighter;
     transform: rotate(10deg);
     filter: drop-shadow(5px 3px 4px black);
 }
 .info[data-direction ="left"]{
     width: 58vw;
-    margin-left: 19%;
+    left: 19%;
     margin-top: 10%;
     transform: rotate(-3deg);
 }
 .info[data-direction ="right"]{
     width: 46vw;
-    margin-left: 25%;
+    left: 25%;
     margin-top: 10%;
     transform: rotate(3deg);
 }
