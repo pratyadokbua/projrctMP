@@ -127,26 +127,26 @@
     top:-30vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:27vw;
+    margin-left:27vw;
 }
 .sideinfo2{
     position: relative;
     top:-15vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:27vw;
+    margin-left:27vw;
 }
 .sideinfo3{
     position: relative;
     top:-42.5vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:63.8vw;
+    margin-left:63.8vw;
 }
 .sideinfo4{
     position: relative;
     top:-27.5vw;
     color:#FDFFF4;
     font-size: 1.5vw;
-    left:66vw;
+    margin-left:66vw;
 }
