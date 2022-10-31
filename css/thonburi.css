@@ -88,7 +88,7 @@
 }
 .info[data-direction ="side_title"]{
     width: 6vw;
-    left: 28vw;
+    margin-left: 28vw;
     top: -30.5vw;
     font-size: 1.5vw;
     padding: 1vw;
@@ -103,7 +103,7 @@
 }
 .info[data-direction ="side_title2"]{
     width: 6vw;
-    left: 65vw;
+    margin-left: 65vw;
     top: -43.3vw;
     font-size: 1.5vw;
     padding: 1vw;
