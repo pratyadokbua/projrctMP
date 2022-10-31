@@ -37,7 +37,7 @@ section{
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 5% 70%;
     grid-gap: 1vw 1vw;
-    width: 80%;
+    width: 50%;
     left: 25%;
     height: 25%;
     background-color: #FFC635;
