@@ -275,19 +275,19 @@ body{
     width: 4vw;
     position: absolute;
     left: 26.5vw;
-    top: 53%;
+    top: 58%;
 }
 .triangle[data-arrow="arrow1"]{
     width: 4vw;
     position: absolute;
     left: 49.6vw;
-    top: 53%;
+    top: 58%;
 }
 .triangle[data-arrow="arrow2"]{
     width: 5vw;
     position: absolute;
     left: 69.5vw;
-    top: 49%;
+    top: 55%;
 }
 #befSukhothai .defaultText{
     font-size: 1.5vw;
