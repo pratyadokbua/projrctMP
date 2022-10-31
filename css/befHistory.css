@@ -12,6 +12,7 @@ body{
 }
 .character_container[data-character ="meat"]{
     left: 60%;
+    margin-top: -27%;
 }
 .character_container[data-character ="shell"]{
     margin-top: 15%;
@@ -21,6 +22,7 @@ body{
 .character_container[data-character ="nut"]{
     left: 30%;
     width: 20%;
+    margin-top: -25%;
 }
 .character_container[data-character ="bracelet"]{
     margin-top: -14%;
