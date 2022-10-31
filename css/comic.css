@@ -1,0 +1,142 @@
+ /* comic */
+ .comic_container{
+    background: #FFFFFF;
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: auto;
+    position: relative;
+}
+.comic_container p{
+    font-size: 2vw;
+    transition: 1s;
+    position: relative;
+}
+
+b{
+    color: #F1592A;
+    font-weight:normal;
+    font-size: 2.5vw;
+    transition: 1s;
+}
+.comic_container .box{
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 80%;
+}
+
+.align-center{
+    width: 60%;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+.comic_container .scene{
+    position: relative;
+    width: 100%;
+}
+.box .props, .box .subScene{ 
+    position: absolute;
+}
+
+.comic_container .scene[data-scene="3"]{
+    width: 80%;
+    left: 20%;
+}
+.comic_container .scene[data-scene="4"]{
+    width: 25%;
+    padding-top: 40%;
+}
+
+.comic_container .scene[data-status="hide"]{
+    display: none;
+}
+[data-aos="fade-up"]{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s;
+}
+[data-aos="fade-up"].active{
+    opacity: 1;
+    transform: translateY(0);
+}
+[data-aos="fade"]{
+    transform-origin:center;
+    transition: .5s;
+    opacity: 0;
+}
+[data-aos="fade"].active{
+    opacity: 1;
+    transition: 1s;
+}
+[data-aos="walk-out"]{
+    bottom: 0%;
+    translate: -150% -50%;
+    transition: 2s;
+    opacity: 0;
+}
+[data-aos="walk-out"].active{
+    translate: -5% -38%;
+    opacity: 1;
+}
+[data-aos="spin-out"]{
+    opacity: 0;
+    transition: 2s;
+}
+[data-aos="spin-out"].active{
+    opacity: 1;
+    translate: -50vw 10vw;
+    animation: spin 360ms linear 0s infinite;
+}
+[data-type="sub-scene"]{
+    width: 100%;
+    left: 0;
+}
+
+
+.winky{
+    filter: drop-shadow(5px 2px 4px #fffd82);
+    animation: wink 1800ms cubic-bezier(0.25,0.25,0.75,0.75) infinite;
+}
+
+@keyframes wink {
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+}
+@keyframes spin {
+    0%{
+        opacity: 1;
+        transform: rotate(0);
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(-360deg);
+    }
+}
+[padding-top="30%"]{
+    padding-top: 30%;
+}
+[padding-top="10%"]{
+    padding-top: 10%;
+}
+[padding-bottom="30%"]{
+    padding-bottom: 30%;
+}
+[padding-bottom="10%"]{
+    padding-bottom: 10%;
+}
+#end .comic_container .box{
+    width: 70%
+}
+

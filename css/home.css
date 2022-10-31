@@ -1,0 +1,40 @@
+#home{
+    position: relative;
+    text-align: center;
+}
+.container{
+    scroll-behavior: smooth;
+    width: var(--continerSize);
+    position: relative;
+    display: block;
+    margin: auto;
+    overflow-x: hidden;
+    top:0;
+}
+/* title */
+.title{
+    text-align: center;
+    position: relative;
+    font-size: 15vw;
+    margin-bottom: -25%;
+}
+.title_bg{
+    padding-top: 17.5%;
+    width: 100%;
+}
+.subtitle{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 20%;
+    z-index: 1;
+    line-height: 100%;
+}
+.subtitle h2{
+    font-style: normal;
+    font-size: 3vw;
+}
+.subtitle h3{
+    font-style: normal;
+    font-size: 2vw;
+}

@@ -1,0 +1,74 @@
+html, body, :root{
+    margin: 0;
+    background: #BFE9F7;
+    font-family: 'Itim';
+    font-size: 2vw;
+    color: #238AAB;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    --continerSize: 70vw;
+    --containerPosition: calc((100vw - var(--continerSize))/2)
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.table-cell{
+    display: table-cell;
+    justify-content: center;
+    vertical-align: middle;
+}
+.table{
+    display: table;
+    position: relative;
+    margin-left: 12.5%;
+}
+.clickAble{
+    cursor: pointer;
+}
+.text-center{
+    text-align: center;
+}
+section{
+    position: relative;
+    overflow-y: hidden;
+}
+.collection-box{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 5% 70%;
+    grid-gap: 1vw 1vw;
+    width: 80%;
+    left: 25%;
+    height: 25%;
+    background-color: #FFC635;
+    border-radius: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.collection-box .coin{
+    position: relative;
+    width: 20%;
+    filter: brightness(50%);
+    opacity: 50%;
+}
+.collection-box .coin[data-found="true"]{
+    filter: brightness(100%);
+    opacity: 1;
+}
+.coinBox{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    opacity: 0;
+}
+.coinBox[data-active="true"]{
+    z-index: 10000;
+    opacity: 1;
+}
+.item{
+    background-color: red;
+}

@@ -4,95 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="vue.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/loading.css">
+    <link rel="stylesheet" href="./css/character.css">
+    <link rel="stylesheet" href="./css/prologue.css">
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/nav.css">
     <link rel="stylesheet" href="./css/befHistory.css">
     <link rel="stylesheet" href="./css/sukhothai.css">
     <link rel="stylesheet" href="./css/rattanakosin.css">
     <link rel="stylesheet" href="./css/ayuthaya.css">
     <link rel="stylesheet" href="./css/thonburi.css">
-    <title>เหรียญวิเศษ</title>
-    <style>
-        HTML, body, :root{
-            margin: 0;
-            background: #BFE9F7;
-            font-family: 'Itim';
-            font-size: 1vw;
-            scroll-behavior: smooth;
-            --continerSize: 70vw;
-            --containerPosition: calc((100vw - var(--continerSize))/2)
-        }
-        ::-webkit-scrollbar {
-            display: none;
-        }
-        #home{
-            position: relative;
-            margin-top: -15%
-        }
-        .container{
-            scroll-behavior: smooth;
-            width: var(--continerSize);
-            position: relative;
-            display: block;
-            margin: auto;
-            overflow-x: hidden;
-            top:0;
-        }
-        /* title */
-        .title{
-            position: absolute;
-            width: 50%;
-            left: 25%;
-            top: 10%;
-        }
-        .title_bg{
-            padding-top: 17.5%;
-            width: 100%;
-        }
-        #home{
-            text-align: center;
-        }
-        .subtitle{
-            position: absolute;
-            width: 50%;
-            left: 25%;
-            color: #238AAB;
-            top: 30%;
-            z-index: 1;
-            line-height: 100%;
-        }
-        .subtitle h2{
-            font-style: normal;
-            font-size: 3vw;
-        }
-        .subtitle h3{
-            font-style: normal;
-            font-size: 2vw;
-        }
-        section{
-            position: relative;
-        }
-        .clickAble{
-            cursor: pointer;
-        }
-
-
-        .defaultText{
-            font-size: 2vw;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/comic.css">
+    <title>เหรียญวิเศษของคุณยาย</title>
 </head>
-<body>
+<body onload="hideLoader()">
+    <div class="loading" data-active="true">
+        <p class="loading-text text-center" aria-label="Loading">
+            <span class="letter" aria-hidden="true">L</span>
+            <span class="letter" aria-hidden="true">o</span>
+            <span class="letter" aria-hidden="true">a</span>
+            <span class="letter" aria-hidden="true">d</span>
+            <span class="letter" aria-hidden="true">i</span>
+            <span class="letter" aria-hidden="true">n</span>
+            <span class="letter" aria-hidden="true">g</span>
+        </p>
+    </div>
+    <div class="coinBox" onclick="closeCoinBox(this)" data-active="false">
+        <div class="collection-box" style="padding: 0% 5%;">
+            <div class="text-center">เบี้ย</div>
+            <div class="text-center">พดด้วงยุคแรก</div>
+            <div class="text-center">พดด้วงยุคหลัง</div>
+            <div class="text-center">กษาปณ์</div>
+            <img data-coin="เบี้ย" class="coin align-center"style="width: 80%;" src="./pic/coin/1.png">
+            <img data-coin="พดด้วงยุคแรก" class="coin align-center"style="width: 80%;" src="./pic/coin/2.png">
+            <img data-coin="พดด้วงยุคหลัง" class="coin align-center"style="width: 80%;" src="./pic/coin/4.png">
+            <img data-coin="กษาปณ์" class="coin align-center"style="width: 80%;" src="./pic/coin/3.png">
+        </div>
+    </div>
+    
     <!-- nav-bar -->
     <div id="nav" class="nav">
         <div class="timeline" @click="isActivate = !isActivate">
-            <h3>Timeline</h3>
+            <h3>Menu</h3>
             <div class="icon"></div>
         </div>
         <div class="menu" :activate="isActivate">
             <ul>
-                <a v-for="item in items" :href=item.to><li :style="{background: item.color }" >{{ item.title }}</li></a>
+                <a v-for="item in items" @click="scrollTo(item.to)" class="clickAble"><li :style="{background: item.color }" >{{ item.title }}</li></a>
             </ul>
         </div>
     </div>
@@ -100,7 +61,9 @@
 
     <!-- Home page -->
     <div id="home">
-        <img class="title" src="pic/head.svg"/>
+        <div class="title">
+            เงินวิเศษ
+        </div>
         <img class="title_bg" src="pic/Title_Img/title2.PNG"/>
         <div class="subtitle">
             <h2>ของคุณยาย</h2>
@@ -109,7 +72,157 @@
     </div>
 
      <!-- Story -->
-     <section id="story">
+     <section id="story" style="padding-top: 20%">
+        <div class="comic_container">
+            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
+            <div class="box">
+                <img id="scene1" data-type="scene" data-subScene="#subScene1" data-aos="fade-up" class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
+                <img id="subScene1" data-type="sub-scene" data-aos="fade" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene1.PNG" style="width: 100%;top:0; left: 0"></img>
+            </div>
+            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
+            <div class="box">
+                <img id="scene2" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene2.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_2.PNG" style="width: 20%;top:25%; left: 3%"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_1.PNG" style="width: 35%;top:-10%; left: 22.5%"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_3.PNG" style="width: 20%;top:15%; right: 5%"></img>
+            </div>
+            <div class="table" style="width: 75%; padding-top: 5%;">
+                <p data-aos="fade-up" class="text-center table-cell" style="width: 32.5%; position: relative;">
+                    แต่ที่น้องฟรังก์สนใจที่สุด ก็คือ...
+                    <br>
+                    <br>
+                    <b data-aos="fade-up" style="font-size: 2.5vw;">เงินวิเศษ<br>ของคุณยาย</b><br>
+                    <br>
+                    น่ะสิ !
+                </p>
+                <div class="box table-cell">
+                    <img id="scene3" data-type="scene" data-aos="fade-up" class="scene" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
+                    <img data-aos="fade" data-type="props" data-animation="winky" class="props" src="./pic/comic/open/effectScene3.PNG" style="width: 20%;top:27.5%; right: 0"></img>
+                </div>
+            </div>
+            <div class="box">
+                <img id="scene4" data-type="scene" data-aos="fade-up" class="scene" data-scene="4" src="./pic/comic/open/scene4.jpeg"></img>
+            </div>
+            <p data-aos="fade-up" class="align-center" style="padding-top: 5%; padding-bottom: 7.5%">
+                ตกดึกวันนั้น<br>
+                น้องฟรังก์จึงพยายามหยิบเงินวิเศษในกล่อง<br>
+                ลงมาดูจากชั้นวางของ<br>
+            </p>
+            <div class="box">
+                <img id="scene5" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene5.jpeg"></img>
+                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene5.PNG" style="width: 100%;top:0; left: 0"></img>
+            </div>
+            <b data-aos="fade-up" class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
+                เคร๊ง!
+            </b>
+            <p data-aos="fade-up" class="align-center" style="padding-bottom: 15%">
+                “ไม่นะ!” น้องฟรังก์อุทาน<br>
+                กล่องของคุณยายหล่นลงมาจากชั้น<br>
+                แถมเงินวิเศษก็กระจัดกระจายไปหมด!<br>
+            </p>
+            <div class="box">
+                <img id="scene6" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene6.jpeg"></img>
+                <img data-aos="spin-out" data-animation="active" class="props" src="./pic/coin/1.png" style="width: 10%;top:40%; left: 35%"></img>
+                <img data-aos="spin-out" data-animation="active" class="props" src="./pic/coin/2.png" style="width: 15%;top:50%; left: 10%"></img>
+                <img data-aos="spin-out" data-animation="active" class="props" src="./pic/coin/3.png" style="width: 20%;top:65%; left: 30%"></img>
+            </div>
+            <p data-aos="fade-up" class="align-center text-center" style="padding-top: 10%; padding-bottom: 7.5%">
+                น้องฟรังก์พยายามตามหาเงินทั้งหมด<br>
+                แต่ก็ไม่พบสักที
+            </p>
+            <p data-aos="fade-up" class="align-center text-center" style="padding-top: 15%; padding-bottom: 7.5%">
+                ด้วยความง่วง และไม่รู้จะทำอย่างไรดี<br>
+                คืนนี้ก็เลยขอกลับมานอนพักก่อน
+            </p>
+            <div class="box">
+                <img id="scene7" data-type="scene" data-subScene="#subScene7" data-aos="fade-up" style="padding-bottom: 20%;" class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
+                <img id="subScene7" data-type="sub-scene" data-aos="fade" style="padding-bottom: 20%;" class="subScene" src="./pic/comic/open/scene7_2.jpeg"></img>
+            </div>
+        </div>
+        <div class="prologue" style="padding-bottom: 10%;">
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9622.PNG"/>
+                <div data-aos="fade-up" class="textBox">
+                    <img src="./pic/Textbox/Box-02.svg" style="transform: rotate(2deg);"/>
+                    <p class="text">สวัสดี<br>น้องฟรังก์</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5747.PNG"/>
+                <div data-aos="fade-up" class="textBox" data-posX="100%">
+                    <img src="./pic/Textbox/Box-03.svg" style="transform: rotate(2deg); scale: 1.5;"/>
+                    <p class="text" style="left: -7.5%">คุณเป็นใคร<br>
+                        แล้วหนูมาอยู่ที่นี่<br>
+                        ได้ยังไง</p>
+                </div>
+            </div>
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9545.PNG"/>
+                <div data-aos="fade-up" class="textBox" style="left: 95%;">
+                    <img src="./pic/Textbox/Box-02.svg" style="scale: 1.5;"/>
+                    <p class="text">ฉันคือ<br>
+                        จิตวิญญาณพดด้วง<br>
+                        ในกล่องของคุณยาย<br>
+                        ยังไงล่ะ</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5746.PNG"/>
+                <div data-aos="fade-up" class="textBox" data-posX="100%" data-posY="-15%" >
+                    <img src="./pic/Textbox/Box-03.svg" style="transform: rotate(5deg); scale: 1.7"/>
+                    <p class="text" style="left: -7.5%">เหรียญของคุณยาย! <br>
+                    หนูต้องเอาไปคืนคุณยาย <br>
+                    หนูอยากกลับบ้าน </p>
+                </div>
+            </div>
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9549.PNG" style="transform: scaleX(-1);"/>
+                <div data-aos="fade-up" class="textBox" style="left: 95%;">
+                    <img src="./pic/Textbox/Box-02.svg" style="scale: 1.4;"/>
+                    <p class="text">ไม่ต้องห่วงนะ <br>
+                        เดี๋ยวฉันจะช่วยเธอเอง</p>
+                </div>
+            </div>
+        </div>
+        <div style="width: 40%; display: flex;align-items: center;justify-content: center;background-color:#FFC635; margin: auto; border-radius: 10px;">
+            <div class="collection-box" style="padding: 5% 0%;">
+                <div class="text-center" style="font-size: 1vw;">เบี้ย</div>
+                <div class="text-center" style="font-size: 1vw;">พดด้วงยุคแรก</div>
+                <div class="text-center" style="font-size: 1vw;">พดด้วงยุคหลัง</div>
+                <div class="text-center" style="font-size: 1vw;">กษาปณ์</div>
+                <img data-coin="เบี้ย" class="coin align-center"style="width: 80%;" src="./pic/coin/1.png">
+                <img data-coin="พดด้วงยุคแรก" class="coin align-center"style="width: 80%;" src="./pic/coin/2.png">
+                <img data-coin="พดด้วงยุคหลัง" class="coin align-center"style="width: 80%;" src="./pic/coin/4.png">
+                <img data-coin="กษาปณ์" class="coin align-center"style="width: 80%;" src="./pic/coin/3.png">
+            </div>
+        </div>
+        <div style="width: 15vw; height: 15vw; position: relative; rotate: 45deg; left: 53vw; top: 15vw; z-index: 2; skew: 45deg;">
+            <img data-aos="fade-up" data-coin="เบี้ย" class="clickAble" src="./pic/coin/1.png" style="rotate: -45deg;width: 40%;position: absolute; top:0;left: -50%;">
+            <img data-aos="fade-up" data-coin="พดด้วงยุคแรก" class="clickAble" src="./pic/coin/2.png" style="rotate: -45deg;width: 40%;position: absolute; left: 0;bottom: 0;">
+            <img data-aos="fade-up" data-coin="พดด้วงยุคหลัง" class="clickAble" src="./pic/coin/4.png" style="rotate: -45deg;width: 40%;position: absolute; bottom: 7%; right: -3%">
+            <img data-aos="fade-up" data-coin="กษาปณ์" class="clickAble" src="./pic/coin/3.png" style="rotate: -45deg;width: 40%;position: absolute; left: 25%; top: 0;">
+        </div> 
+        <div class="epilogue" style="padding-top: 20%;padding-bottom: 20%;">
+            <div class="character_container pojduang">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9550.PNG" style="scale: -1 1;"/>
+                <div data-aos="fade-up" class="textBox" style="top: -90%;left: 20%;">
+                    <img src="./pic/Textbox/Box-06.svg" style="scale: 1.8;"/>
+                    <p class="text orange" style="top: -5%;left: 4%;">เธอต้องตามหาเหรียญ<br>
+                        ของคุณยายที่ซ่อนอยู่<br>
+                        ในแต่ละยุคให้ครบ <br>
+                        แค่นี้เธอก็จะได้กลับไปหาคุณยาย<br>
+                        พร้อมกับเหรียญที่หายไป</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5745.PNG"/>
+                <div data-aos="fade-up" class="textBox" style="top: -70%; left: 11%">
+                    <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -.8 .8"/>
+                    <p class="text orange" style="left: 2%;">เข้าใจแล้ว !</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ยุคก่อนประวัติศาสตร์ -->
@@ -122,7 +235,7 @@
                 <div class="topic_text";>ยุคก่อนประวัติศาสตร์</div>
             </div>
 
-            <div class="character_container "style="transform: scaleX(-1);">
+            <div class="character_container "style="left: 25%;margin-top: -26%;transform: scaleX(-1);">
                 <img class="character" src="pic/Character/Pojduang/IMG_9545.PNG"/> 
             </div>
 
@@ -142,7 +255,7 @@
                 <img class="character" style="position: relative; z-index: 1;" src="pic/BefHis_Asset/IMG_9528.PNG"/>
                 <img class="character" style="position: absolute; margin-top:0%; left: 10%;" src="pic/BefHis_Asset/star.svg"/>
             </div> 
-            <div class="info defaultText">
+            <div class="info">
                 <p>อย่างเอาขวานไปแลกกับเนื้อสัตว์</p>
             </div>
             <div class="character_container" data-character ="shell">
@@ -161,7 +274,7 @@
                 <img class="character" style="position: relative; z-index: 1;" src="pic/BefHis_Asset/IMG_9618.PNG"/>
                 <img class="character" style="position: absolute; margin-top:0%; left: 35%; top: 6%; width: 60%;" src="pic/BefHis_Asset/circle/circle-Buffalo.svg"/>
             </div>
-            <div class="info defaultText" data-direction="left">
+            <div class="info" data-direction="left">
                 <p>ต่อมาก็มีการใช้สิ่งของมีค่าที่ทั้งสองฝ่ายต้องการ เป็นสื่อกลางการแลกเปลี่ยน เช่นเปลือกหอย
                     เมล็ดพืช ปศุสัตว์ ลูกปัด ขวานทองแดง หัวธนู
                 </p>
@@ -190,7 +303,7 @@
             <div class="character_container" data-character ="silver">
                 <img class="character" src="pic/BefHis_Asset/IMG_9539.PNG"/>
             </div>
-            <div class="info defaultText" data-direction="right">
+            <div class="info" data-direction="right">
                 <p>
                     ในที่สุดได้นำโลหะทองแดง โลหะเงิน โลหะทอง ซึ่งหายาก <br>มาใช้เป็นสื่อกลางในการแลกเปลี่ยน
                 </p>
@@ -208,7 +321,7 @@
 
     <!-- ยุคสมัยก่อนสุโขทัย -->
     <section id="befSukhothai">
-        <div class="info defaultText" data-direction="befSukhotext1">
+        <div class="info" data-direction="befSukhotext1">
             <h1>หลังจากนั้นอณาจักรไทยได้รับอิทธิพลมาจากอินเดีย<br>เกิดเป็นเหรียญเงินตรอกตรา</h1>
         </div><br><br>
         <!-- coin -->
@@ -222,18 +335,18 @@
                 <img class="info-image" :src="i.image"/>
             </div>
             <div class="table-cell">
-                <p class="info-text">
+                <p class="info-text defaultText">
                     {{ i.info }}
                 </p>
             </div>
-            <div class="closeBtn clickAble" @click="i.status = false"><p style="position: absolute;top: -125%; width: 100%;"> x </p></div>    
+            <div class="closeBtn clickAble" @click="i.status = false"><p class="defaultText" style="position: absolute;top: -200%; width: 100%;"> x </p></div>    
         </div>
 
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"/>
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"data-arrow="arrow1"/>
         <img class="triangle" src="pic/BefHis_Asset/TriangleArrow-Down.svg"data-arrow="arrow2"/>
 
-        <div class="table" style="margin-top:-2.5vw;">
+        <div class="table" style="margin-top:-2.5vw; width: 40%;">
             <div class="info table-cell" data-direction="funancoin">
                 <p>อณาจักรฟูนัน</p>
             </div>
@@ -244,7 +357,7 @@
                 <p>อณาจักรศรีวิชัย</p>
             </div>
         </div>
-        <div class="info defaultText" data-direction="befSukhotext1">
+        <div class="info" data-direction="befSukhotext1">
             <h1>สัญลักษณ์บนเหรียญสื่อถึงความเชื่อทางศาสนาพราหมณ์<br>อำนาจรัฐ กษัตริย์ และความมั่งคั่งอุดมสมบูรณ์</h1>
         </div>
     </section>
@@ -272,7 +385,7 @@
             <img class='txt3' src="pic/BefHis_Asset/tape.svg"/>
             <div class="centered";>เงินตราพดด้วง<br><div class="centered2">สุโขทัย</div></div>
         </div>
-        <div class="txt defaultText">
+        <div class="txt">
             สมัยสุโขทัยถือว่าเป็นจุดเริ่มต้นของการผลิตเงินตรา<br>
              ที่มีรูปแบบเฉพาะตัว ได้แก่ ‘เงินพดด้วง’ <br>
                 เป็นยุคที่มีความเจริญทางการค้าขายเป็นอย่างมาก <br>
@@ -292,7 +405,7 @@
                 เป็นปลายแหลม</div>
             <div class="arrowtxt4">มีรูขนาดใหญ่ระหว่างขา</div>
         </div>
-        <div class="txt3 defaultText">
+        <div class="txt3">
             ส่วนตราที่ประทับมี 7 ตราส่วนใหญ่ ได้แก่
         </div>
         <div class="coinall">
@@ -325,7 +438,7 @@
             <img class ='frunc' src="pic/Character/Frunk/frunk_shell.PNG">
             <img class ='incoin2' src="pic/allCoin_dicut/coin-01.png"/>
         </div>
-        <div class="txt6 defaultText">
+        <div class="txt6">
             และมีการใช้ ‘เบี้ย’ ซึ่งเป็นเปลือกหอย<br>
             เป็นเงินปลีกสําหรับแลกเปลี่ยนสินค้าราคาต่ำ
         </div>
@@ -534,30 +647,122 @@
                 <?xml version="1.0" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(250,238,219,255)" fill-opacity="1" d="M0,32L60,69.3C120,107,240,181,360,213.3C480,245,600,235,720,197.3C840,160,960,96,1080,74.7C1200,53,1320,75,1380,85.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
             </div>
         </div>
-    </section> 
-
+    </section>
+    <section id="end">
+        <div style="width: 15vw; height: 15vw; position: relative; rotate: 45deg; left: 53vw; top: 15vw; z-index: 2">
+                <img data-aos="fade-up" data-collectAble="true" data-coin="พดด้วงยุคหลัง" onclick="getCoin(this)" class="clickAble" src="./pic/coin/4.png" style="rotate: -45deg;width: 40%;position: absolute; top: 0; left: 0">
+                <img data-aos="fade-up" data-collectAble="true" data-coin="เบี้ย" onclick="getCoin(this)" class="clickAble" src="./pic/coin/1.png" style="rotate: -45deg;width: 40%;position: absolute; bottom: 0; ;right: 0;">
+                <img data-aos="fade-up" data-collectAble="true" data-coin="พดด้วงยุคแรก" onclick="getCoin(this)" class="clickAble" src="./pic/coin/2.png" style="rotate: -45deg;width: 40%;position: absolute; left: 0;bottom: 0;">
+                <img data-aos="fade-up" data-collectAble="true" data-coin="กษาปณ์" onclick="getCoin(this)" class="clickAble" src="./pic/coin/3.png" style="rotate: -45deg;width: 40%;position: absolute; right: 0; top: 0;">
+        </div> 
+        <div class="epilogue" style="padding-top: 20%;padding-bottom: 20%;" v-if="!foundAll">
+            <div class="character_container coinkung">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Coin_kung/IMG_9945.PNG" style="scale: -1 1;"/>
+                <div data-aos="fade-up" class="textBox" style="top: -90%;left: 20%;">
+                    <img src="./pic/Textbox/Box-05.svg" style="scale: 1.6;"/>
+                    <p class="text orange" style="left: 4%;">โอ๊ะโอ!ดูเหมือนจะยังเก็บเหรียญ<br>
+                        ไม่ครบเลยนะ<br>
+                        ลองหาดูอีกรอบกันไหม</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_42.png"/>
+                <div data-aos="fade-up" class="textBox" style="top: -70%; left: 11%">
+                    <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -1 1"/>
+                    <p class="text orange" style="top: -4%; left: -4%;">แง<br>
+                        มาลองหา<br>
+                        ใหม่กันเถอะ!</p>
+                </div>
+            </div>
+        </div>
+        <div class="epilogue" style="padding-top: 20%;" v-if="foundAll">
+            <div class="character_container coinkung">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Coin_kung/IMG_9668.PNG" style="scale: -1 1;"/>
+                <div data-aos="fade-up" class="textBox" style="top: -90%;left: 20%;">
+                    <img src="./pic/Textbox/Box-05.svg" style="scale: 1.5;"/>
+                    <p class="text orange" style="left: 4%;">ยินดีด้วยน้องนะฟรังก์ เธอตามหาเหรียญของ<br>คุณยายครบแล้ว</p>
+                </div>
+            </div>
+            <div class="character_container frunk">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_5745.PNG"/>
+                <div data-aos="fade-up" class="textBox" style="top: -70%; left: 11%">
+                    <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -1 1"/>
+                    <p class="text orange">เย้!</p>
+                </div>
+            </div>
+        </div>
+        <div class="epilogue" v-if="foundAll">
+            <div class="character_container coinkung" style="display: block; margin: auto;">
+                <img data-aos="fade-up" class="character" src="./pic/Character/Coin_kung/IMG_9670.PNG" style="scale: -1 1;"/>
+                <div data-aos="fade-up" class="textBox" style="left: -50%; top: -50%">
+                    <img src="./pic/Textbox/Box-05.svg" style="scale: -1.2 1.2;rotate: -10deg"/>
+                    <p class="text orange" >ตอนนี้ก็ถึงเวลาที่<br>
+                        เธอจะต้องกลับไป<br>
+                        หาคุณยายแล้ว
+                </div>
+                <div data-aos="fade-up" class="textBox" style="left: 45%; top: -40%">
+                    <img src="./pic/Textbox/Box-05.svg" style="scale: .75"/>
+                    <p class="text orange" >บ๊ายบาย</p>
+                </div>
+            </div>
+        </div>
+        <div class="comic_container" v-if="foundAll">
+            <div class="box" padding-top="10%">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene1.jpeg">
+                <img data-aos="fade" data-type="sub-scene" class="subScene" src="./pic/comic/end/scene1_2.jpeg">
+            </div>
+            <p data-aos="fade-up" padding-bottom="30%" padding-top="10%" style="left: 10%">
+                เช้าวันรุ่งขึ้น น้องฟรังก์ตื่นขึ้นมาจาก<br>
+                ฝันอันแสนประหลาด<br>
+                ก่อนจะนึกถึงเรื่องที่เกิดขึ้นเมื่อคืนได้  
+            </p>
+            <div class="box">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene2.PNG">
+            </div>
+            <p data-aos="fade-up" padding-top="10%" padding-bottom="30%" class="text-center align-center">
+                จึงรีบวิ่งไปดู<br>
+                เงินวิเศษของคุณยาย<br>
+                ที่อยู่ในกล่องบนชั้นวาง
+            </p>
+            <p data-aos="fade-up" padding-bottom="10%" class="align-center" style="width: fit-content">
+                น้องฟรังก์เปิดฝากล่อง<br>
+                ด้วยความร้อนอกร้อนใจ<br>
+                ก่อนจะพบว่า...
+            </p>
+            <div class="box" padding-bottom="10%">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene3.jpeg">
+            </div>
+            <div class="box" padding-bottom="10%">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene4.jpeg">
+            </div>
+            <b data-aos="fade-up" padding-bottom="30%" class="text-center align-center">
+                “อ้าว ก็อยู่ครบนี่นา”
+            </b>
+            <div class="box" padding-bottom="10%">
+                <img data-aos="walk-out" data-type="props" class="props" style="width: 14%; right: -12%;" src="./pic/comic/end/effectScene5.PNG">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene5.jpeg">
+            </div>
+            <p data-aos="fade-up" padding-bottom="30%" class="text-center align-center">
+                ถึงจะไม่แน่ใจว่าเกี่ยวข้องกับฝันเมื่อคืนหรือไม่<br>
+                แต่ก็รู้สึกโล่งใจที่เงินวิเศษของคุณยายยังอยู่<br>
+                ครบทั้งหมด
+            </p>
+            <p data-aos="fade-up" padding-bottom="30%" class="text-center align-center">
+                ความฝันในคืนนั้นคงเป็นความฝันที่น้องฟรังก์จดจำไปอีกนานเลย
+            </p>
+            <b data-aos="fade-up" class="text-center align-center" style="font-size: 3.5rem;width:fit-content;padding-bottom:  20%;">
+                ...จบบริบูรณ์...
+            </b>
+        </div>
+        <b class="text-center align-center" v-if="foundAll" style="width: fit-content; font-size: 1.5vw; padding-top: 10%; padding-bottom: 10%;">
+            วิชานี้เป็นส่วนหนึ่งของวิชาออกแบบเว็บไซต์ หลักสูตรนิเทศศิลป์ คณะสถาปัตยกรรมศาสตร์ ศิลปะและการออกแบบ<br>
+            และวิชาโปรแกรมสื่อประสม แขนงวิชาการพัฒนาสื่อประสมและเกม คณะเทคโนโลยีสารสนเทศ<br>
+            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        </b>
+    </section>
+    <script src="end.js"></script>
+    <script src="animateOnScroll.js"></script>
     <script src="sprite.js"></script>
-    <script>
-        // const allSection = [home,story,befHistory, befSukhothai, sukhothai, ayuthaya, thonburi, rattanakosin]
-        // allSection.forEach((el, index) => {
-        //     // el.style.background = nav.items[index].color
-        //     console.log(el.getBoundingClientRect())
-        //     console.log(el.getBoundingClientRect().top)
-        // });
-
-        befHistory.style.background = "#ffecd4"
-        befSukhothai.style.background = "#C0E9F7"
-        sukhothai.style.background = "#ffefd1"
-        thonburi.style.background = "#9e94b5"
-        console.log(window.scroolY)
-        document.addEventListener('scroll', (e) => {
-        })
-        // const ctx = canvas.getContext("2d")
-        // let imgPath = "https://cdn.discordapp.com/attachments/1007998666616869008/1019958140554461305/unknown.png"
-        // let sprite = new Sprite(imgPath);
-        // sprite.createImage()
-        // sprite.append(container)
-        // setInterval(()=>{sprite.move()}, 100)
-    </script>
+    <script src="body.js"></script>
 </body>
 </html>

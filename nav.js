@@ -45,5 +45,11 @@ let nav = new Vue({
             }
             
         ]
+    },
+    methods:{
+        scrollTo: function(el){
+            let to = document.querySelector(el)
+            to.scrollIntoView();
+        }
     }
 })

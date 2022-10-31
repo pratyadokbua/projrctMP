@@ -1,0 +1,14 @@
+.character{
+    width: 100%;
+    height: 100%;
+}
+.character_container{
+    position: relative;
+    width: 25%;
+    transform: scaleX(1);
+}
+.textBox{
+    position: absolute;
+    width: 100%;
+}
+
