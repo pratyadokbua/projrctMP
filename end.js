@@ -4,9 +4,9 @@ function getCoin(el){
         coin.dataset.found = true
         if(coin.dataset.collectable){
             coin.style.display = "none"
-        }
+    }
     })
-    let collectedCoin = document.querySelectorAll(`.coin[data-found='true'`)
+    let collectedCoin = document.querySelectorAll(`[data-found='true'`)
     console.log(collectedCoin.length)
     if(collectedCoin.length == 4){
         end.foundAll = true
