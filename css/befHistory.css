@@ -164,26 +164,26 @@ body{
     padding-right: 2vw;
     font-size: 2vw;
     margin-top: 5% ;
-    left: 37%;
+    margin-left: 37%;
     font-weight: lighter;
     transform: rotate(10deg);
     filter: drop-shadow(5px 3px 4px black);
 }
 .info[data-direction ="left"]{
     width: 58vw;
-    left: 19%;
+    margin-left: 19%;
     margin-top: 10%;
     transform: rotate(-3deg);
 }
 .info[data-direction ="right"]{
     width: 46vw;
-    left: 25%;
+    margin-left: 25%;
     margin-top: 10%;
     transform: rotate(3deg);
 }
 .info[data-direction ="befSukhotext1"]{
     width: 100vw;
-    left: 0;
+    margin-left: 0;
     font-size: 2vw;
     font-weight: bold;
     margin-top: 5%;
@@ -191,6 +191,7 @@ body{
     filter:none;
     color:#8F663A;
     background-color: transparent;
+    padding-left: 0;
 }
 .info[data-direction ="funancoin"]{
     width: 10vw;
