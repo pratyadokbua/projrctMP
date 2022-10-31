@@ -9,7 +9,7 @@ let nav = new Vue({
                 to: "#home"
             },
             {
-                title: "เนื่อเรื่อง",
+                title: "เนื้อเรื่อง",
                 color: "#F1592A",
                 to: "#story"
             },
