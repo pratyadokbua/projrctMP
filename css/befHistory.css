@@ -169,13 +169,13 @@
 }
 .info[data-direction ="left"]{
     width: 58vw;
-    left: 19%;
+    margin-left: 19%;
     margin-top: 10%;
     transform: rotate(-3deg);
 }
 .info[data-direction ="right"]{
     width: 46vw;
-    left: 25%;
+    margin-left: 25%;
     margin-top: 10%;
     transform: rotate(3deg);
 }
