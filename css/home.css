@@ -38,3 +38,22 @@
     font-style: normal;
     font-size: 2vw;
 }
+.title-character{
+    position: absolute;
+}
+.frung{
+    animation: splash 2s ease-in-out 0s infinite;
+    transform-origin: bottom;
+}
+@keyframes splash{
+    0%{
+        rotate: 2deg;
+    }
+    50%{
+        rotate: -2deg;
+    }
+    100%{
+        rotate: 2deg;
+    }
+
+}
