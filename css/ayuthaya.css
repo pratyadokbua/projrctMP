@@ -12,7 +12,7 @@
     position: absolute;
     top: 35%;
     left: 34%;
-    font-size: 1.5rem;
+    font-size: 3vw;
     color: #fff;
     transform: rotate(3deg);
 }
@@ -55,7 +55,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #3f99b6;
-    font-size: 0.75rem;
+    font-size: 1.5vw;
     width: 100%;
   }
   .ayuthayacentered3 {
@@ -65,7 +65,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #3f99b6;
-    font-size: 0.75rem;
+    font-size:1.5vw;
     width: 100%;
   }
   .ayuthayacoin1{
@@ -81,7 +81,7 @@
    
 }
 .ayuthayatxt3  {
-    font-size:0.75rem;
+    font-size:1.5vw;
     width: 60%;
     font-family:'Itim';
     color: #ffffff;
@@ -154,7 +154,7 @@
 .ayuthayaarrowtxt1{
     position: absolute;
     width: 14%;
-    font-size:0.85rem;;
+    font-size:1.7vw;
     text-align: center;
     font-family:'Itim';
     color: #ffffff;
@@ -164,7 +164,7 @@
 .ayuthayaarrowtxt2{
     position: absolute;
     width: 13%;
-    font-size:0.85rem;;
+    font-size:1.7vw;
     font-family:'Itim';
     color: #ffffff;
     margin-left: 12.5%;
@@ -174,7 +174,7 @@
 .ayuthayaarrowtxt3{
     position: absolute;
     width: 18%;
-    font-size:0.85rem;;
+    font-size:1.7vw;
     font-family:'Itim';
     margin-left: 35.5%;
     margin-top: 6.5%;
@@ -185,7 +185,7 @@
     width: 18%;
     margin-left: 12.5%;
     margin-top: -23.5%;
-    font-size:0.85rem;;
+    font-size:1.7vw;
 
     font-family:'Itim';
     color: #ffffff;
