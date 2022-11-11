@@ -10,7 +10,7 @@
     top: 35%;
     left: 34%;
     transform: rotate(-16deg);
-    font-size: 3vw;
+    font-size: 1.5rem;
     color: #fff;
 }
 .nongayuthaya11{
@@ -52,7 +52,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: #3f99b6;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     width: 100%;
   }
   .ayuthayacentered3 {
@@ -62,7 +62,7 @@
     transform: translate(-50%, -50%)scalex(-1);
     text-align: center;
     color: #3f99b6;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     width: 100%;
   }
   .ayuthayacoin1{
@@ -78,7 +78,7 @@
    
 }
 .ayuthayatxt3  {
-    font-size:1.5vw;
+    font-size:0.75rem;
     width: 60%;
     font-family:'Itim';
     color: #ffffff;
@@ -105,7 +105,7 @@
     width: 30%;
     border-radius: 30px;
     padding: 0.5vw;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     color: #F1592A;
     margin-left: auto;
     margin-right: auto;
@@ -151,7 +151,7 @@
 .ayuthayaarrowtxt1{
     position: absolute;
     width: 14%;
-    font-size:1.7vw;;
+    font-size:0.85rem;;
     text-align: center;
     font-family:'Itim';
     color: #ffffff;
@@ -161,7 +161,7 @@
 .ayuthayaarrowtxt2{
     position: absolute;
     width: 13%;
-    font-size:1.7vw;;
+    font-size:0.85rem;;
     font-family:'Itim';
     color: #ffffff;
     margin-left: 12.5%;
@@ -171,7 +171,7 @@
 .ayuthayaarrowtxt3{
     position: absolute;
     width: 18%;
-    font-size:1.7vw;;
+    font-size:0.85rem;;
     font-family:'Itim';
     margin-left: 35.5%;
     margin-top: 6.5%;
@@ -182,7 +182,7 @@
     width: 18%;
     margin-left: 12.5%;
     margin-top: -23.5%;
-    font-size:1.7vw;;
+    font-size:0.85rem;;
 
     font-family:'Itim';
     color: #ffffff;
