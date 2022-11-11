@@ -67,7 +67,7 @@
 .coin2{
     width: 30%;
     transform: rotate(-10deg);
-    margin-top:-5%;
+    margin-top:-8%;
     pointer-events: none;
     
 }
@@ -166,7 +166,7 @@
     position: absolute;
     top: 50%;
     left:45%;
-    transform: translate(-50%, -50%) scalex(-1);
+    transform: translate(-50%, -50%) ;
     text-align: center;
     color: #3f99b6;
     font-size: 0.9rem;
@@ -176,7 +176,7 @@
     position: absolute;
     top: 48%;
     left:45%;
-    transform: translate(-50%, -50%) rotate(10deg);
+    transform: translate(-50%, -50%) ;
     text-align: center;
     color: #3f99b6;
     font-size: 0.9rem;
