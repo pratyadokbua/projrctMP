@@ -5,13 +5,16 @@
     margin-left: 40%;
     transform: rotate(20deg);
 }
+.ayuthayatxt{
+    transform: rotate(20deg);
+}
 .ayuthayacentered{
     position: absolute;
     top: 35%;
     left: 34%;
-    transform: rotate(-16deg);
     font-size: 1.5rem;
     color: #fff;
+    transform: rotate(3deg);
 }
 .nongayuthaya11{
     width: 35%;
