@@ -17,31 +17,35 @@
 }
 .nav .menu{
     transition: 1s;
-    transform: translate(100%, 20%);
+    transform: translate(100%, 3rem);
 }
 .nav .menu[activate]{
-    transform: translate(0%, 20%);
+    transform: translate(0%, 3rem);
 
 } 
 .nav li{
     list-style-type: none;
-    width: 8.5vw;
+    width: 4.25rem;
     text-align: center;
     margin-top: 3%;
     padding: 10%;
-    border-radius: 1vw;
-    font-size: 1.25vw;
+    border-radius: .5rem;
+    font-size: 0.625rem;
 }
 .timeline{
     position: absolute;
     display: block;
     right: 0;
-    top: 10%;
-    width: 5vw;
-    height: 5vw;
+    top: .5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     background-color: #959595;
     border-radius: 50%;
     cursor: pointer;
+    transition: .5s;
+}
+.timeline[activate]{
+    background-color: #f1592a;
 }
 .timeline .icon{
     position: absolute;
@@ -55,7 +59,7 @@
     position: absolute;
     top: -50%;
     width: 100%;
-    font-size: 1vw;
+    font-size: .5rem;
     text-align: center;
     color: #959595;
 }

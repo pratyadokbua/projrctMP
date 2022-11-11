@@ -9,6 +9,16 @@ html, body, :root{
     --continerSize: 70vw;
     --containerPosition: calc((100vw - var(--continerSize))/2)
 }
+@media only screen and (max-width: 750px) {
+    :root{
+        font-size: 3.5vw;
+    }
+}
+@media only screen and (max-width: 400px) {
+    :root{
+        font-size: 7.5vw;
+    }
+}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -36,7 +46,7 @@ section{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 5% 70%;
-    grid-gap: 3vw 1vw;
+    grid-gap: 1.5rem .5rem;
     width: 50%;
     left: 25%;
     height: 25%;
