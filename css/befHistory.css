@@ -10,6 +10,10 @@ body{
     margin-top: 5%;
     left: 20%;
 }
+.character_container[data-character ="arrow"]{
+    position: absolute;
+    left: 43.5%;
+}
 .character_container[data-character ="meat"]{
     left: 60%;
     margin-top: -27%;
@@ -57,58 +61,88 @@ body{
 }
 .character_container[data-character ="funancoin"]{
     margin-top: 0%;
-    left:18%;
-    width: 20%;
-    transform: scaleX(1) rotate(10deg);
+    left:21.5%;
+    width: 15%;
 }
 .character_container[data-character ="twancoin"]{
-    margin-top:-21%;
-    left:41%;
-    width: 20%;
-    transform: scaleX(1) rotate(10deg);
+    margin-top: -17%;
+    left:43%;
+    width: 15%;
 }
 .character_container[data-character ="srivichaicoin"]{
-    margin-top:-24%;
+    margin-top:-21.5%;
     left:61.5%;
     width: 27%;
-    z-index: 1; 
 }
 .character_container[data-character ="star1"]{
     position: absolute;
     margin-top:12%;
     width: 4%;
     left:30%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
+
 .character_container[data-character ="star2"]{
     position: absolute;
     margin-top:25%;
     width: 3%;
     left:35%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
 .character_container[data-character ="star3"]{
     position: absolute;
     margin-top:10%;
     width: 4.5%;
     left:49%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
 .character_container[data-character ="star4"]{
     position: absolute;
     margin-top:14%;
     width: 3%;
     left:65.9%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
 .character_container[data-character ="star5"]{
     position: absolute;
     margin-top:27%;
     width: 4%;
     left:60%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
 .character_container[data-character ="star6"]{
     position: absolute;
     margin-top:25%;
     width: 3%;
     left:78%;
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
 }
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .buble{
     position: absolute;
     width: 30%;
@@ -117,7 +151,7 @@ body{
 }
 .buble_text{
     position: absolute;
-    font-size: 2vw;
+    font-size: 1rem;
     top:28%;
     left:30%;
     color: #248bab;
@@ -141,7 +175,7 @@ body{
     top: 44%;
     left: 18%;
     transform: rotate(-17deg);
-    font-size: 2.4vw;
+    font-size: 1.2rem;
     color: #fff;
 }
 .info{
@@ -154,12 +188,12 @@ body{
     padding:1px;
     padding-left: 2vw;
     padding-right: 2vw;
-    font-size: 2vw;
+    font-size: 1rem;
     margin-top: 5% ;
     margin-left: 37%;
     font-weight: lighter;
     transform: rotate(10deg);
-    filter: drop-shadow(5px 3px 4px black);
+    filter: drop-shadow(5px 3px 4px rgba(0,0,0,0.3));
 }
 .info[data-direction ="left"]{
     width: 58vw;
@@ -176,7 +210,7 @@ body{
 .info[data-direction ="befSukhotext1"]{
     width: 100vw;
     margin-left: 0;
-    font-size: 2vw;
+    font-size: 1rem;
     font-weight: bold;
     margin-top: 5%;
     transform: rotate(0deg);
@@ -189,7 +223,7 @@ body{
 .info[data-direction ="funancoin"]{
     width: 10vw;
     left: 25%;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     margin-top: -2%;
     transform: rotate(0deg);
     background-color: #6FA764;
@@ -198,7 +232,7 @@ body{
     width: 12vw;
     left: 49%;
     margin-top: -4.8%;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     transform: rotate(0deg);
     background-color: #6FA764;
 }
@@ -206,7 +240,7 @@ body{
     width: 12vw;
     left: 75%;
     margin-top: -4.8%;
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     transform: rotate(0deg);
     background-color: #6FA764;
 }
@@ -260,8 +294,8 @@ body{
     text-align: center;
     vertical-align: middle;
     position: absolute;
-    right: 1%;
-    top: 1%
+    right: 3%;
+    top: 3%
 }
 .cointype{
     left: 2.5vw;
@@ -292,6 +326,7 @@ body{
     top: 55%;
 }
 #befSukhothai .defaultText{
-    font-size: 1.5vw;
+    font-size: 0.75rem;
     color: white;
 }
+
