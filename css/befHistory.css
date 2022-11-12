@@ -223,7 +223,7 @@ body{
 .info[data-direction ="funancoin"]{
     width: 10vw;
     left: 25%;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     margin-top: -2%;
     transform: rotate(0deg);
     background-color: #6FA764;
@@ -232,7 +232,7 @@ body{
     width: 12vw;
     left: 49%;
     margin-top: -4.8%;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     transform: rotate(0deg);
     background-color: #6FA764;
 }
@@ -240,7 +240,7 @@ body{
     width: 12vw;
     left: 75%;
     margin-top: -4.8%;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     transform: rotate(0deg);
     background-color: #6FA764;
 }
