@@ -34,7 +34,7 @@
         </p>
     </div>
     <div class="coinBox" onclick="closeCoinBox(this)" data-active="false">
-        <div class="collection-box" style="padding: 5% 5%;">
+        <div class="using-collection-box" style="padding: 5% 5%;">
             <div class="text-center">เบี้ย</div>
             <div class="text-center">พดด้วงยุคแรก</div>
             <div class="text-center">พดด้วงยุคหลัง</div>
@@ -79,7 +79,7 @@
     </div>
 
      <!-- Story -->
-     <section id="story" style="padding-top: 20%">
+     <section id="story" style="padding-top: 20%; padding-bottom: 20%;">
         <div class="comic_container">
             <p data-aos="fade-up" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
             <div class="box">
@@ -120,9 +120,9 @@
                 <img id="scene5" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene5.jpeg"></img>
                 <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene5.PNG" style="width: 100%;top:0; left: 0"></img>
             </div>
-            <b data-aos="fade-up" class="align-center" style="font-size: 15vw; transform: rotate(-18deg); padding-top: 15%; padding-bottom: 17.5%">
-                เคร้ง!
-            </b>
+            <div class="box" style="padding-top: 5rem; padding-bottom: 5rem">
+                <img data-aos="fade-up" src="./pic/sound/crank.svg" style="rotate: -20deg;" />
+            </div>
             <p data-aos="fade-up" class="align-center" style="padding-bottom: 15%">
                 “ไม่นะ!” น้องฟรังก์อุทาน<br>
                 กล่องของคุณยายหล่นลงมาจากชั้น<br>
@@ -192,25 +192,14 @@
                 </div>
             </div>
         </div>
-        <div style="width: 40%; display: flex;align-items: center;justify-content: center;background-color:#FFC635; margin: auto; border-radius: 10px;">
-            <div class="collection-box" style="padding: 5% 0%;">
-                <div class="text-center" style="font-size: 1vw;">เบี้ย</div>
-                <div class="text-center" style="font-size: 1vw;">พดด้วงยุคแรก</div>
-                <div class="text-center" style="font-size: 1vw;">พดด้วงยุคหลัง</div>
-                <div class="text-center" style="font-size: 1vw;">กษาปณ์</div>
-                <img data-coin="เบี้ย" class="coin align-center"style="width: 80%;" src="./pic/coin/1.png">
-                <img data-coin="พดด้วงยุคแรก" class="coin align-center"style="width: 80%;" src="./pic/coin/2.png">
-                <img data-coin="พดด้วงยุคหลัง" class="coin align-center"style="width: 80%;" src="./pic/coin/4.png">
-                <img data-coin="กษาปณ์" class="coin align-center"style="width: 80%;" src="./pic/coin/3.png">
-            </div>
-        </div>
-        <div style="width: 15vw; height: 15vw; position: relative; rotate: 45deg; left: 53vw; top: 15vw; z-index: 2;">
+        
+        <div style="width: 15vw; height: 15vw; position: relative; rotate: 45deg; left: 53vw; top: 5vw; z-index: 2;">
             <img data-aos="fade-up" data-coin="เบี้ย" class="clickAble" src="./pic/coin/1.png" style="rotate: -45deg;width: 40%;position: absolute; top:0;left: -50%;">
             <img data-aos="fade-up" data-coin="พดด้วงยุคแรก" class="clickAble" src="./pic/coin/2.png" style="rotate: -45deg;width: 40%;position: absolute; left: 0;bottom: 0;">
             <img data-aos="fade-up" data-coin="พดด้วงยุคหลัง" class="clickAble" src="./pic/coin/4.png" style="rotate: -45deg;width: 40%;position: absolute; bottom: 7%; right: -3%">
             <img data-aos="fade-up" data-coin="กษาปณ์" class="clickAble" src="./pic/coin/3.png" style="rotate: -45deg;width: 40%;position: absolute; left: 25%; top: 0;">
         </div> 
-        <div class="epilogue" style="padding-top: 20%;padding-bottom: 20%;">
+        <div class="epilogue" style="padding-top: 20%; padding-bottom: 10%;">
             <div class="character_container pojduang">
                 <img data-aos="fade-up" class="character" src="./pic/Character/Pojduang/IMG_9550.PNG" style="scale: -1 1;"/>
                 <div data-aos="fade-up" class="textBox" style="top: -90%;left: 20%;">
@@ -228,6 +217,18 @@
                     <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -.8 .8"/>
                     <p class="text orange" style="left: 2%;">เข้าใจแล้ว !</p>
                 </div>
+            </div>
+        </div>
+        <div style="width: 50%; display: flex;align-items: center;justify-content: center;background-color:#FFC635; margin: auto; border-radius: 10px;">
+            <div class="collection-box" style="padding: 5% 0%;">
+                <div class="text-center" style="font-size: 120%;">เบี้ย</div>
+                <div class="text-center" style="font-size: 120%;">พดด้วงยุคแรก</div>
+                <div class="text-center" style="font-size: 120%;">พดด้วงยุคหลัง</div>
+                <div class="text-center" style="font-size: 120%;">กษาปณ์</div>
+                <img data-coin="เบี้ย" class="coin align-center"style="width: 80%;" src="./pic/coin/1.png">
+                <img data-coin="พดด้วงยุคแรก" class="coin align-center"style="width: 80%;" src="./pic/coin/2.png">
+                <img data-coin="พดด้วงยุคหลัง" class="coin align-center"style="width: 80%;" src="./pic/coin/4.png">
+                <img data-coin="กษาปณ์" class="coin align-center"style="width: 80%;" src="./pic/coin/3.png">
             </div>
         </div>
     </section>
@@ -1019,7 +1020,7 @@
                 <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_42.png"/>
                 <div data-aos="fade-up" class="textBox" style="top: -70%; left: 11%">
                     <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -1 1"/>
-                    <p class="text orange" style="top: -4%; left: -4%;">แง<br>
+                    <p class="text orange" style="top: -4%; left: 2%;">
                         มาลองหา<br>
                         ใหม่กันเถอะ!</p>
                 </div>
@@ -1090,7 +1091,7 @@
             </b>
             <div class="box" padding-bottom="10%">
                 <img data-aos="walk-out" class="props" style="width: 14%; right: -12%;" src="./pic/comic/end/effectScene5.PNG">
-                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene5.jpeg">
+                <img data-aos="fade-up" data-type="scene" class="scene" src="./pic/comic/end/scene5.PNG">
             </div>
             <p data-aos="fade-up" padding-bottom="30%" class="text-center align-center">
                 ถึงจะไม่แน่ใจว่าเกี่ยวข้องกับฝันเมื่อคืนหรือไม่<br>

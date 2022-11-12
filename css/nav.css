@@ -6,7 +6,13 @@
     top: 1%;
     right: 1%;
     padding: 5% 0;
+    font-size: 2vw;
 }
+@media only screen and (max-width: 600px){
+    .nav{
+        font-size: 4vw;
+    }
+} 
 .nav a{
     color: white;
     text-decoration: none;
@@ -17,35 +23,39 @@
 }
 .nav .menu{
     transition: 1s;
-    transform: translate(100%, 3rem);
+    transform: translate(100%, 3em);
+    font-size: 0.625em;
 }
 .nav .menu[activate]{
-    transform: translate(0%, 3rem);
+    transform: translate(0%, 3em);
 
 } 
 .nav li{
     list-style-type: none;
-    width: 4.25rem;
+    width: 8.5em;
     text-align: center;
     margin-top: 3%;
     padding: 10%;
-    border-radius: .5rem;
-    font-size: 0.625rem;
+    border-radius: 1em;
+    font-size: 1em;
 }
 .timeline{
     position: absolute;
     display: block;
     right: 0;
-    top: .5rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    top: .5em;
+    width: 2.5em;
+    height: 2.5em;
     background-color: #959595;
     border-radius: 50%;
     cursor: pointer;
     transition: .5s;
+    color: #959595;
+    font-size: 1em;
 }
 .timeline[activate]{
     background-color: #f1592a;
+    color: #f1592a;
 }
 .timeline .icon{
     position: absolute;
@@ -59,7 +69,6 @@
     position: absolute;
     top: -50%;
     width: 100%;
-    font-size: .5rem;
+    font-size: .625em;
     text-align: center;
-    color: #959595;
 }

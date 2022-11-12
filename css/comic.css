@@ -1,14 +1,14 @@
  /* comic */
  .comic_container{
     background: #FFFFFF;
-    width: 60%;
+    width: 80vw;
     display: block;
     margin: auto;
     height: auto;
     position: relative;
 }
 .comic_container p{
-    font-size: 2vw;
+    font-size: 120%;
     transition: 1s;
     position: relative;
 }

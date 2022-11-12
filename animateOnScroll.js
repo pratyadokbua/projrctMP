@@ -36,27 +36,9 @@ function sceneLookUp(key, params, checkpointParams){
   })
 }
 
-function animationLookUp(time){
-  var elGrp = document.querySelectorAll("[data-animation]");
-  elGrp.forEach((el)=>{
-    if(el.parentElement.classList.contains("active")){
-      setTimeout(()=>{
-        if(el.parentElement.classList.contains("active")){
-          el.classList.add(el.dataset.animation)
-        }else{
-          el.classList.remove(el.dataset.animation)
-        }
-      }, time)
-    }
-    else{
-      el.classList.remove(el.dataset.animation)
-    }
-  })
-}
-
 window.addEventListener("scroll", ()=>{
     AOS()
-    sceneLookUp("[data-type='sub-scene']", "active", 40)
+    sceneLookUp("[data-type='sub-scene']", "active", 30)
     sceneLookUp("[data-aos='walk-out']", "active", 60)
     sceneLookUp("[data-type='props']", "active", 20)
 
