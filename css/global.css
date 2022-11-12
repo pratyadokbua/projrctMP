@@ -88,3 +88,13 @@ section{
     justify-content: center;
     align-content: center;
 }
+.using-collection-box .coin{
+    position: relative;
+    width: 20%;
+    filter: brightness(50%);
+    opacity: 50%;
+}
+.using-collection-box .coin[data-found="true"]{
+    filter: brightness(100%);
+    opacity: 1;
+}
