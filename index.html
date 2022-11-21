@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="vue.js"></script>
+    <script src="./js/vue.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Itim' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="favicon-16x16.png">
     <link rel="stylesheet" href="./css/global.css">
@@ -58,7 +58,7 @@
             </ul>
         </div>
     </div>
-    <script src="nav.js"></script>
+    <script src="./js/nav.js"></script>
 
     <!-- Home page -->
     <div id="home">
@@ -84,15 +84,15 @@
             <p data-aos="fade-up" class="text-center align-center" style="padding-top: 10%; padding-bottom: 2.5%">ปิดเทอมใหญ่ช่วงฤดูร้อน น้องฟรังก์ได้กลับมา เยี่ยมคุณยายที่ต่างจังหวัด</p>
             <div class="box">
                 <img id="scene1" data-type="scene" data-subScene="#subScene1" data-aos="fade-up" class="scene" src="./pic/comic/open/scene1_1.jpeg"></img>
-                <img id="subScene1" data-type="sub-scene" data-aos="fade" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
-                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene1.PNG" style="width: 100%;top:0; left: 0"></img>
+                <img id="subScene1" data-type="sub-scene" data-delay="1000" data-aos="fade" class="subScene" src="./pic/comic/open/scene1_2.jpeg"></img>
+                <img data-aos="fade" data-type="props" data-delay="2000" class="props" src="./pic/comic/open/effectScene1.PNG" style="width: 100%;top:0; left: 0"></img>
             </div>
-            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่างๆ ให้ฟังมากมาย</p>
+            <p data-aos="fade-up" class="text-center align-center" style="padding-top: 15%; padding-bottom: 4%">คุณยายได้เล่าเรื่องต่าง ๆ ให้ฟังมากมาย</p>
             <div class="box">
                 <img id="scene2" data-type="scene" data-aos="fade-up" class="scene" src="./pic/comic/open/scene2.jpeg"></img>
-                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_2.PNG" style="width: 20%;top:25%; left: 3%"></img>
-                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_1.PNG" style="width: 35%;top:-10%; left: 22.5%"></img>
-                <img data-aos="fade" data-type="props" class="props" src="./pic/comic/open/effectScene2_3.PNG" style="width: 20%;top:15%; right: 5%"></img>
+                <img data-aos="fade" data-type="props" data-delay="500" class="props" src="./pic/comic/open/effectScene2_2.PNG" style="width: 20%;top:25%; left: 3%"></img>
+                <img data-aos="fade" data-type="props" data-delay="1000" class="props" src="./pic/comic/open/effectScene2_1.PNG" style="width: 35%;top:-10%; left: 22.5%"></img>
+                <img data-aos="fade" data-type="props" data-delay="1500" class="props" src="./pic/comic/open/effectScene2_3.PNG" style="width: 20%;top:15%; right: 5%"></img>
             </div>
             <div class="table" style="width: 75%; padding-top: 5%;">
                 <p data-aos="fade-up" class="text-center table-cell" style="width: 32.5%; position: relative;">
@@ -105,7 +105,7 @@
                 </p>
                 <div class="box table-cell">
                     <img id="scene3" data-type="scene" data-aos="fade-up" class="scene" data-scene="3" src="./pic/comic/open/scene3.jpeg"></img>
-                    <img data-aos="fade" data-type="props" data-animation="winky" class="props" src="./pic/comic/open/effectScene3.PNG" style="width: 20%;top:27.5%; right: 0"></img>
+                    <img data-aos="fade" data-type="props winky" data-delay="0" data-animation="winky" class="props" src="./pic/comic/open/effectScene3.PNG" style="width: 20%;top:27.5%; right: 0"></img>
                 </div>
             </div>
             <div class="box">
@@ -144,7 +144,7 @@
             </p>
             <div class="box">
                 <img id="scene7" data-type="scene" data-subScene="#subScene7" data-aos="fade-up" style="padding-bottom: 20%;" class="scene" src="./pic/comic/open/scene7_1.jpeg"></img>
-                <img id="subScene7" data-type="sub-scene" data-aos="fade" style="padding-bottom: 20%;" class="subScene" src="./pic/comic/open/scene7_2.jpeg"></img>
+                <img id="subScene7" data-type="sub-scene" data-delay="1000" data-aos="fade" style="padding-bottom: 20%;" class="subScene" src="./pic/comic/open/scene7_2.jpeg"></img>
             </div>
         </div>
         <div class="prologue" style="padding-bottom: 10%;">
@@ -377,7 +377,7 @@
             <h1>สัญลักษณ์บนเหรียญสื่อถึงความเชื่อทางศาสนาพราหมณ์<br>อำนาจรัฐ กษัตริย์ และความมั่งคั่งอุดมสมบูรณ์</h1>
         </div>
     </section>
-    <script src="befSukhothai.js"></script>
+    <script src="./js/befSukhothai.js"></script>
 
        <!-- ยุคสุโขทัย -->
     <section id="sukhothai" style="position: relative;">
@@ -544,7 +544,7 @@
 
         <div class="buble" data-buble ="thon_bub2" data-aos="fade-up">
             <img class="character" src="pic/Textbox/Box-03-green.svg" style="transform:scale(1,1);"/>
-            <div class="buble_text" data-buble ="thon_bub2">เดี๋ยวก็ได้<br>กลับบ้านแล้ว<br>สู้ๆน้องฟรังก์!</div>
+            <div class="buble_text" data-buble ="thon_bub2">เดี๋ยวก็ได้<br>กลับบ้านแล้ว<br>สู้ ๆ น้องฟรังก์!</div>
         </div>
 
         <div  data-aos="fade-up">
@@ -622,7 +622,7 @@
                 <div class="textlaw1_5">ตราพระแสงจักร<br>เป็นตราประจําแผ่นดิน </div>
                 <div data-aos="fade-up" class="Glaw1_6">
                     <img class="textboxlaw1_6" src="pic/Textbox/Box-02.svg"/>
-                    <div class="textlaw1_6">มีขนาดและราคาต่างๆ<br>เช่น ตําลึง บาท<br>กึ่งบาท สลึง เฟื้อง</div>
+                    <div class="textlaw1_6">มีขนาดและราคาต่าง ๆ <br>เช่น ตําลึง บาท<br>กึ่งบาท สลึง เฟื้อง</div>
                 </div>
             </div>
             <div class="wavelaw1">
@@ -685,7 +685,7 @@
             <div data-aos="fade-up" class="Gimg2law4">
                 <div class="Glaw4_4">
                     <img class="textboxlaw4_4" src="pic/Textbox/Box-04.svg"/>
-                    <div class="textlaw4_4">พูดง่ายๆที่นี่ก็คือ<br>โรงผลิตเหรียญ<br>สินะ!</div>
+                    <div class="textlaw4_4">พูดง่าย ๆ ที่นี่ก็คือ<br>โรงผลิตเหรียญ<br>สินะ!</div>
                 </div>
                 <img class="imglaw4_2" src="pic/lawTime/time4_2.png">
                 <img class="charFlaw4" src="pic/Character/Frunk/frunk_shell.PNG">
@@ -917,7 +917,7 @@
                     <img class="KSlaw7" src="pic/Character/Coin_kung/IMG_9668.PNG">
                     <div data-aos="fade-up" class="GKStalklaw7">
                         <img class="ks1law7" src="pic/Textbox/Box-05.svg"/>
-                        <div class="ks2law7">น้องๆ ทางบ้าน
+                        <div class="ks2law7">น้อง ๆ ทางบ้าน
                             <br>เคยใช้เหรียญสตางค์
                             <br>กันบ้างไหมเอ่ย?</div>
                     </div>
@@ -959,7 +959,7 @@
                     <img class="KSlaw8" src="pic/Character/Coin_kung/IMG_9667.PNG">
                     <div data-aos="fade-up" class="GKStalklaw8">
                         <img class="ks1law8" src="pic/Textbox/Box-05.svg"/>
-                        <div class="ks2law8">เหรียญสวยๆ
+                        <div class="ks2law8">เหรียญสวย ๆ
                             <br>เต็มเลย!</div>
                     </div>
                 </div>
@@ -989,7 +989,7 @@
                     <div class="textend3law9">ในปี พ.ศ. 2529</div>
                     <img data-aos="fade-up" class="coin2bahtlaw9" src="pic/lawTime/real2baht.png">
                     <div data-aos="fade-up" class="textfooterlaw9">ได้มีการผลิตเหรียญกษาปณ์หมุนเวียน ชนิดราคา 2 บาท<br>ออกใช้เพิ่มขึ้นอีก 1 ชนิดราคา</div>
-                    <img data-aos="fade-up" class="coinhide4law9" src="pic/coinHide/3.png">
+                    <img data-aos="fade-up" data-collectAble="true" data-coin="กษาปณ์" onclick="getCoin(this)" class="coinhide4law9 clickAble" src="pic/coinHide/3.png">
                 </div>
                 <div class="Gwavelaw9">
                     <div class="wavelaw9">
@@ -1001,10 +1001,10 @@
     </section>
     <section id="end">
         <div style="width: 15vw; height: 15vw; position: relative; rotate: 45deg; left: 53vw; top: 15vw; z-index: 2">
-                <img data-aos="fade-up" data-collectAble="true" data-coin="พดด้วงยุคหลัง" onclick="getCoin(this)" class="clickAble" src="./pic/coin/4.png" style="rotate: -45deg;width: 40%;position: absolute; top: 0; left: 0">
-                <img data-aos="fade-up" data-collectAble="true" data-coin="เบี้ย" onclick="getCoin(this)" class="clickAble" src="./pic/coin/1.png" style="rotate: -45deg;width: 40%;position: absolute; bottom: 0; ;right: 0;">
-                <img data-aos="fade-up" data-collectAble="true" data-coin="พดด้วงยุคแรก" onclick="getCoin(this)" class="clickAble" src="./pic/coin/2.png" style="rotate: -45deg;width: 40%;position: absolute; left: 0;bottom: 0;">
-                <img data-aos="fade-up" data-collectAble="true" data-coin="กษาปณ์" onclick="getCoin(this)" class="clickAble" src="./pic/coin/3.png" style="rotate: -45deg;width: 40%;position: absolute; right: 0; top: 0;">
+                <img data-aos="fade-up" data-coin="พดด้วงยุคหลัง" src="./pic/coin/4.png" style="rotate: -45deg;width: 40%;position: absolute; top: 0; left: 0">
+                <img data-aos="fade-up" data-coin="เบี้ย" src="./pic/coin/1.png" style="rotate: -45deg;width: 40%;position: absolute; bottom: 0; ;right: 0;">
+                <img data-aos="fade-up" data-coin="พดด้วงยุคแรก" src="./pic/coin/2.png" style="rotate: -45deg;width: 40%;position: absolute; left: 0;bottom: 0;">
+                <img data-aos="fade-up" data-coin="กษาปณ์" src="./pic/coin/3.png" style="rotate: -45deg;width: 40%;position: absolute; right: 0; top: 0;">
         </div> 
         <div class="epilogue" style="padding-top: 20%;padding-bottom: 20%;" v-if="!foundAll">
             <div class="character_container coinkung">
@@ -1016,13 +1016,19 @@
                         ลองหาดูอีกรอบกันไหม</p>
                 </div>
             </div>
-            <div class="character_container frunk">
-                <img data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_42.png"/>
+            <div class="character_container frunk box">
+                <img id="cryingFrunk" data-aos="fade-up" class="character" src="./pic/Character/Frunk/Prologue/IMG_42.png"/>
                 <div data-aos="fade-up" class="textBox" style="top: -70%; left: 11%">
                     <img src="./pic/Textbox/Box-04.svg" style="rotate: 5deg; scale: -1 1"/>
                     <p class="text orange" style="top: -4%; left: 2%;">
                         มาลองหา<br>
                         ใหม่กันเถอะ!</p>
+                </div>
+                <div class="box" style="width: 100%;">
+                    <img class="cry" src="./pic/sound/cry-02.svg" />
+                    <img class="cry" src="./pic/sound/cry-02.svg" />
+                    <img class="cry" src="./pic/sound/cry-02.svg" />
+                    <img class="cry" src="./pic/sound/cry-02.svg" />
                 </div>
             </div>
         </div>
@@ -1112,9 +1118,8 @@
             สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
         </p>
     </section>
-    <script src="end.js"></script>
-    <script src="animateOnScroll.js"></script>
-    <script src="sprite.js"></script>
-    <script src="body.js"></script>
+    <script src="./js/end.js"></script>
+    <script src="./js/animateOnScroll.js"></script>
+    <script src="./js/body.js"></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ sukhothai.style.background = "#ffefd1"
 thonburi.style.background = "#9e94b5"
 
 function hideLoader(){
+    window.scrollTo(0 ,0);
     document.querySelector('.loading').style.display = "none";
 }
 
@@ -16,3 +17,18 @@ window.addEventListener("resize", ()=>{
         document.body.classList.remove("stop-transition")
     }, 500)
 })
+
+var crys = document.querySelectorAll(".cry")
+var cryIndex = 0;
+var cry = crys[cryIndex];
+doCry = setInterval(()=>{
+    if(cryingFrunk.classList.contains("active")){
+        cry.classList.remove("active")
+        cryIndex = (cryIndex + 1) % 4
+        cry = crys[cryIndex]
+        cry.classList.add("active")
+    }
+    else{
+        cry.classList.remove("active")
+    }
+}, 1000)

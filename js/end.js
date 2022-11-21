@@ -18,7 +18,7 @@ function getCoin(el){
 function closeCoinBox(el){
     el.dataset.active = 'false'
 }
-let end = new Vue({
+let emdVue = new Vue({
     el: "#end",
     data: {
         foundAll: false

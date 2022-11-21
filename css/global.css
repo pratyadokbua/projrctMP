@@ -62,12 +62,15 @@ section{
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    transition: 1s;
+    transition: .5s;
     opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
 }
 .coinBox[data-active="true"]{
     z-index: 10000;
     opacity: 1;
+    transform: scaleY(1);
 }
 .item{
     background-color: red;
