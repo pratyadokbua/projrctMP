@@ -101,7 +101,7 @@ b{
 }
 
 
-.winky.active{
+[data-aos="fade"].winky.active{
     filter: drop-shadow(5px 2px 4px #fffd82);
     animation: wink 1800ms cubic-bezier(0.25,0.25,0.75,0.75) infinite;
 }
