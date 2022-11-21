@@ -32,3 +32,18 @@ section{
     position: relative;
     overflow-y: hidden;
 }
+div.clickEffect{
+    position:fixed;
+    box-sizing:border-box;
+    background-image: url("../pic/clickEff.png");
+    animation:clickEffect .4s steps(6);
+    width: 128px;
+    height: 128px;
+    z-index:99999;
+    pointer-events: none;
+}
+@keyframes clickEffect {
+    to{
+        background-position: -768px;
+    }
+}

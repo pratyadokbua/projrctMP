@@ -32,3 +32,4 @@ doCry = setInterval(()=>{
         cry.classList.remove("active")
     }
 }, 1000)
+

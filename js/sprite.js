@@ -6,16 +6,29 @@ class Sprite {
     posY = 0
     stepLenghtX = -85
     stepLenghtY = -110
-    col = 4
-    row = 2
-    final_col = 2
+    col = 3
+    row = 3
+    final_col = 3
     state = false
     constructor(imgPath){
         this.imgPath = imgPath
     }
+    setPos(x, y){
+        this.posX = x
+        this.posY = y
+    }
+    setPosX(x){
+        this.posX = x
+    }
+    setPosY(y){
+        this.posY = y
+    }
     setStepLenght(x, y){
         this.stepLenghtX = x
         this.stepLenghtY = y
+    }
+    setCtx(ctx){
+        this.ctx = ctx
     }
     setStepLenghtX(x){
         this.stepLenghtX = x
@@ -29,18 +42,18 @@ class Sprite {
         this.image.height = this.height*this.scale
         this.image.height = this.width*this.scale
     }
-    append(el){
+    append(){
         // el.append(this.image)
         ctx.drawImage(this.image, this.posX, this.posY)
     }
     move(){
         this.state = true
         let move = setInterval(()=>{
-            sprite.next()
+            this.next()
             if(!this.state){
                 clearInterval(move)
             }
-        }, 100)
+        }, 1000)
         
     }
     stop(){

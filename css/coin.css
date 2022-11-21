@@ -30,13 +30,11 @@
     height: 100vh;
     transition: 1s;
     opacity: 0;
-    transform: scaleY(0);
     transform-origin: top;
 }
 .coinBox[data-active="true"]{
     z-index: 10000;
     opacity: 1;
-    transform: scaleY(1);
 }
 .item{
     background-color: red;
@@ -56,6 +54,12 @@
     border-radius: 20px;
     justify-content: center;
     align-content: center;
+    scale: .5;
+    transform-origin: top;
+    transition: .5s;
+}
+.coinBox[data-active="true"] .using-collection-box{
+    scale: 1;
 }
 .using-collection-box .coin{
     position: relative;
@@ -67,32 +71,46 @@
     filter: brightness(100%);
     opacity: 1;
 }
-[data-collectAble="true"][data-coin="เบี้ย"].active{
-    transition: 3s;
+/* [data-collectAble="true"][data-coin="เบี้ย"].collected{
+    transition: 1s;
     width: 10vw;
-    rotate: 0;
     left: 25vw;
     position: fixed;
+    z-index: 1000;
 }
-[data-collectAble="true"][data-coin="พดด้วงยุคแรก"].active{
-    transition: 3s;
+[data-collectAble="true"][data-coin="พดด้วงยุคแรก"].collected{
+    transition: 1s;
     width: 10vw;
     rotate: 0;
     left: 38vw;
     position: fixed;
-
+    z-index: 1000;
 }
-[data-collectAble="true"][data-coin="พดด้วงยุคหลัง"].active{
-    transition: 3s;
+[data-collectAble="true"][data-coin="พดด้วงยุคหลัง"].collected{
+    transition: 1s;
     width: 10vw;
-    rotate: 0;
     left: 51.5vw;
     position: fixed;
-}
-[data-collectAble="true"][data-coin="กษาปณ์"].active{
-    transition: 3s;
+    z-index: 1000;
+} 
+[data-collectAble="true"][data-coin="กษาปณ์"].collected{
+    transition: 1s;
     width: 10vw;
-    rotate: 0;
     left: 64.5vw;
     position: fixed;
+    z-index: 1000;
+} */
+[data-collectAble="true"].collected{
+    animation: dukdik .25s linear forwards;
+    transition: 1s;
+    z-index: 1000;
+}
+
+@keyframes dukdik {
+    50% {
+        rotate: 15deg
+    }
+    100% {
+        rotate: -15deg
+    }
 }
