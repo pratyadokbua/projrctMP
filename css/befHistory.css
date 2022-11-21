@@ -254,17 +254,18 @@ body{
     position: fixed;
     display: table;
     width: 50vw;
-    height: 50vh;
+    height: 15vw;
+    padding: 5%;
     border-radius: 20px;
     background: #9B90B3;
-    top: 25%;
-    left: 25%;
+    top: -20%;
+    left: 20%;
     z-index: 1;
     transition: 1s;
 }
 .coin-info[acivate]{
     width: 50vw;
-    height: 50vh;
+    height: 25vw;
 }
 .info-image{
     position: relative;
