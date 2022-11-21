@@ -5,7 +5,7 @@ function getCoin(el){
             coin.dataset.found = true
         }
         if(coin.dataset.collectable){
-            coin.style.display = "none"
+            coin.classList.add("active")
         }
     })
     let collectedCoin = document.querySelectorAll(`[data-found='true'`)
