@@ -22,7 +22,7 @@ function getCoin(el){
     })
     el.classList.add("collected")
     el.addEventListener('animationend', ()=>{
-        el.style.opacity = 0
+        el.style.display = "none"
     })
     setTimeout(()=>{
         let collectedCoin = document.querySelectorAll(`[data-found='true'`)
