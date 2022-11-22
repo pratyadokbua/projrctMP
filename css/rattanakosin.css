@@ -383,6 +383,7 @@
     color: white;
     text-align: left;
     filter: drop-shadow(0px 3px 3px #c9bca4);
+    z-index: -1;
 }
 .texboxlaw3 {
     position: absolute;
