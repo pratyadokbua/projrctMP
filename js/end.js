@@ -28,7 +28,7 @@ function getCoin(el){
         let collectedCoin = document.querySelectorAll(`[data-found='true'`)
         console.log(collectedCoin.length)
         if(collectedCoin.length == 4){
-            end.foundAll = true
+            emdVue.foundAll = true
         }
         document.querySelector('.coinBox').dataset.active = 'true'
     }, 1000)
