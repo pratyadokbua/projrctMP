@@ -22,14 +22,19 @@ var crys = document.querySelectorAll(".cry")
 var cryIndex = 0;
 var cry = crys[cryIndex];
 doCry = setInterval(()=>{
-    if(cryingFrunk.classList.contains("active")){
+    try{
+        if(cryingFrunk.classList.contains("active")){
         cry.classList.remove("active")
         cryIndex = (cryIndex + 1) % 4
         cry = crys[cryIndex]
         cry.classList.add("active")
+        }
+        else{
+            cry.classList.remove("active")
+        }
     }
-    else{
-        cry.classList.remove("active")
+    catch(e){
+        clearInterval(doCry)
     }
 }, 1000)
 
