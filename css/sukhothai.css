@@ -197,6 +197,7 @@
     width: 12%;
     left: 54.5%;
     top: 40%;
+    pointer-events: none;
 }
 .arrow2{
     position: absolute;
